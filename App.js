@@ -9,8 +9,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 // 외부 컴포넌트
 import SettingsScreen from './component/SettingsScreen';
-import MyinfoScreen   from './component/MyinfoScreen';
-import HomeScreen     from './component/HomeScreen';
+import MyinfoScreen   from './component/KSK/MyinfoScreen';
+import HomeScreen     from './component/JHS/HomeScreen';
 
 const TabNavigator = createBottomTabNavigator(
   {
