@@ -9,6 +9,7 @@ import * as Location from "expo-location";
 
 // 외부 컴포넌트
 import Loading from './Loading';
+import AppleMap from './AppleMap';
 
 //API KEY들
 const API_KEY = '6420351a926dc59bf08ae6d12e5cc3f2';
@@ -55,20 +56,30 @@ export default class HomeScreen extends Component {
         }
      }
      
-     // 렌더 부분
+     /* 렌더 부분         
+       전체적인 구조
+        <컨테이너>
+           <애플 맵 />
+           <위치 표시 />
+        <컨테이너 /> */
      render() {
        const {isLoading, temp, latitude, longitude} = this.state;
       return (
+        // 로딩이 안됐으면 Loading 컴포넌트를 띄움
          isLoading ? <Loading /> : 
+         // 전체 Container
          <View style={styles.container}>
-           <Text style={styles.location}>
-              경도 : {latitude.toFixed(2)}{"\n"}
-              위도 : {longitude.toFixed(2)}
-           </Text>
-           <Text style={styles.location}>
-              
-           </Text>
+           <View style={styles.map}>
+              <AppleMap />
+           </View>
+           <View style={{flex:1}}>
+            <Text style={styles.location}>
+                경도 : {latitude.toFixed(2)}{"\n"}
+                위도 : {longitude.toFixed(2)}
+            </Text>
+           </View>
          </View>
+         // 위로 올리고 싶은 component를 (z-index) 아래로 내림 
       );
     }
   }
@@ -87,4 +98,8 @@ export default class HomeScreen extends Component {
         fontWeight: "bold",
         marginTop: 35
       },
+      map:{
+        flex: 1,
+        ...StyleSheet.absoluteFillObject
+      }
   })
