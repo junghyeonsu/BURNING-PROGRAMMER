@@ -22,6 +22,7 @@ export default class HomeScreen extends Component {
       longitude: 0
     }
   
+    // 처음 시작되면 위치를 받아옴
     componentDidMount(){
       this.getLocation();
     }
@@ -31,7 +32,6 @@ export default class HomeScreen extends Component {
       const { data } = await axios.get(
         `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`
       );
-      // console.log(data);
       this.setState({
         temp: data.main.temp,
         isLoading : false
@@ -50,25 +50,23 @@ export default class HomeScreen extends Component {
             latitude : latitude,
             longitude: longitude
           })
-          // console.log(latitude, longitude);
         } catch (error) {
           Alert.alert("당신의 위치를 찾을 수 없어요!", "슬퍼요");
         }
      }
-  
+     
+     // 렌더 부분
      render() {
        const {isLoading, temp, latitude, longitude} = this.state;
       return (
          isLoading ? <Loading /> : 
          <View style={styles.container}>
            <Text style={styles.location}>
-              경도 : {latitude}
+              경도 : {latitude.toFixed(2)}{"\n"}
+              위도 : {longitude.toFixed(2)}
            </Text>
            <Text style={styles.location}>
-              위도 : {longitude}
-           </Text>
-           <Text style={styles.temp}>
-              온도 : {temp}
+              
            </Text>
          </View>
       );
@@ -84,14 +82,9 @@ export default class HomeScreen extends Component {
       },
       location:{
         flex: 1,
-        fontSize: 15,
+        fontSize: 20,
         textAlignVertical: 'center',
-        fontWeight: "bold"
+        fontWeight: "bold",
+        marginTop: 35
       },
-      temp:{
-        flex: 1,
-        fontSize: 15,
-        textAlignVertical: 'center',
-        fontWeight: "bold"
-      }
   })
