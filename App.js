@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 // 네비게이터
-import {createAppContainer} from 'react-navigation';
-import {createBottomTabNavigator} from 'react-navigation-tabs';
+import { createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 // icon
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -11,49 +12,56 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import SettingsScreen from './component/SettingsScreen';
 import MyinfoScreen   from './component/KSK/MyinfoScreen';
 import HomeScreen     from './component/JHS/HomeScreen';
+import SearchScreen   from './component/KCH/SearchScreen';
+import AddPostScreen  from './component/LJW/AddPostScreen';
 
-const TabNavigator = createBottomTabNavigator(
+// App 컴포넌트 (메인임)
+export default class App extends Component {
+  render(){
+    return(
+      <AppContainer />
+      );
+    }
+};
+
+// 밑에 네비게이션 바 나타내는 부분
+const bottomTabNavigator = createBottomTabNavigator(
+  // 네비게이션
   {
-    Home: {
+    현수: {
       screen: HomeScreen,
+      navigationOptions: {
+
+      },
     },
-    Myinfo: {
+
+    서경: {
       screen: MyinfoScreen,
     },
-    Settings: {
-      screen: SettingsScreen,
+
+    지원: {
+      screen: AddPostScreen
     },
+
+    충환: {
+      screen: SearchScreen
+    }
   },
+  //네비게이션 각종 설정들
   {
-    defaultNavigationOptions: ({navigation}) => ({
-      tabBarIcon: ({horizontal, tintColor}) => {
-        const {routeName} = navigation.state;
-        let iconName;
-        if (routeName === 'Home') {
-          iconName = 'ios-home';
-        } else if (routeName === 'Myinfo') {
-          iconName = 'ios-person';
-        } else if (routeName === 'Settings') {
-          iconName = 'ios-settings';
-        }
-        return (
-          <Ionicons
-            name={iconName}
-            size={horizontal ? 20 : 33}
-            color={tintColor}
-          />
-        );
+    //처음 시작 화면
+    initialRouteName: '현수',
+    //밑에 bar 옵션들
+    tabBarOptions: {
+      labelStyle: {
+        fontSize: 20,
+        margin: 0,
+        padding: 0,
       },
-      // bar option들
-      tabBarOptions: {
-        activeTintColor: '#ffffff',
-        inactiveTintColor: 'gray',
-        style: {
-          backgroundColor: 'black',
-        },
-        showLabel: false,
-      },
-    }),
+    },
+
   },
 );
-export default createAppContainer(TabNavigator);
+
+// bottomTabNavigator를 컴포넌트화 시켜줌
+const AppContainer = createAppContainer(bottomTabNavigator);
