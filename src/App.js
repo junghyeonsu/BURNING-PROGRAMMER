@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+/* Grid 관련 참고사이트들 
+1. https://studiomeal.com/archives/533     (참고블로그)
+*/
+
+import Content from './components/Content';
+
+class App extends Component {
+  render(){
+    return(
+      <div className="App">
+        <div className="container-main">
+          <div className="item-main">제목</div>
+          
+          <div className="item">
+            <div className="container-content">
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              <div className="item-content">IMAGE</div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
