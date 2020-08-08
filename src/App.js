@@ -6,8 +6,10 @@ import './App.css';
 */
 
 import Content from './components/Content';
+import SidebarComponent from './components/SidebarComponent';
 
 class App extends Component {
+
   render(){
     return(
       <div className="App">
@@ -35,7 +37,7 @@ class App extends Component {
               <div className="item-content">IMAGE</div>
               <div className="item-content">IMAGE</div>
               <div className="item-content">IMAGE</div>
-              
+              <SidebarComponent></SidebarComponent>
             </div>
           </div>
         </div>
