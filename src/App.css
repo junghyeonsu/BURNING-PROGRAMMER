@@ -7,7 +7,7 @@
 .container-main {
   display: grid;
   background-color: white;
-  grid-template-rows: 100px;
+  grid-template-rows: 150px auto;
 }
 
 .container-content {
@@ -27,7 +27,7 @@
   background-color: thistle;
   text-align: center;
   margin: 1vh;
-  padding: 4vh;
+  padding: 5vh;
 }
 
 .item-content {
