@@ -4,8 +4,10 @@ import '../styles/Content.css'
 class Content extends Component {
     render(){
         return(
-            <div>
-                hi
+            <div className="Content">
+                <img className="Image" src={this.props.image}></img>
+                <br />
+                {this.props.name}
             </div>
         );
     }
