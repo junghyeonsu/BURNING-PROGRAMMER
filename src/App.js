@@ -14,22 +14,40 @@ import prologImg from './images/prolog.png';
 import rImg from './images/R_Programming.png';
 import raspberryPiImg from './images/RaspberryPi.png';
 
+const list=[
+  ["java", lispImg, "java2"],
+  ["web", lispImg, "web2"],
+  ["java", lispImg, "java"],
+  ["c++", lispImg, "c++"],
+  ["web", lispImg, "web"],
+  ["java", lispImg, "java"],
+];
+
 class App extends Component {
     
   state = {
       display : true,
-      machineLearning : true,
+      presentLanguage : ""
   };
 
   hideComponents = () => {
     this.setState({display: false});
-    console.log(`${this.state.display}`);
   }
 
   showComponents = () => {
+    this.setState({
+      presentLanguage : "web"
+    })
   }
 
   render(){
+
+    const data = list.map(i => 
+      (
+        i[0] === this.state.presentLanguage ? <Content image={i[1]} name={i[2]}></Content>:""
+      )
+    );
+
     return(
       <div className="App">
         <Sidebar></Sidebar>
@@ -38,20 +56,13 @@ class App extends Component {
           
           <div className="item">
             <div className="container-content">
-            <button
-              onClick={this.hideComponents}
-              >머신러닝만 감추기</button>
-              {this.state.display ? <Content image={pythonImg}></Content> : null}
-              <Content image={cPlusPlusImg}></Content>
-              <Content image={lispImg}></Content>
-              <Content image={rImg}></Content>
-              <Content image={prologImg}></Content>
-              <Content image={javaImg}></Content>
-              <Content image={juliaImg}></Content>
-              <Content image={arduinoImg}></Content>
-              <Content image={raspberryPiImg}></Content>
+            
+            <button onClick={this.showComponents}>웹만 보여주세요</button>
+            {data}
+
             </div>
           </div>
+
         </div>
       </div>
     );
