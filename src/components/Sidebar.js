@@ -1,5 +1,6 @@
 import "../styles/Sidebar.css";
 import React from "react";
+import ToggleButton from "./ToggleButton";
 
 export const Sidebar = ({ width, height, children }) => {
   const [xPosition, setX] = React.useState(-width);
@@ -25,13 +26,15 @@ export const Sidebar = ({ width, height, children }) => {
           minHeight: height
         }}
       >
-        <button
-          onClick={() => toggleMenu()}
-          className="toggle-menu"
-          style={{
-            transform: `translate(${width}px, 20vh)`
-          }}
-        ></button>
+        <div
+         onClick={() => toggleMenu()}
+         className="toggle-menu"
+         style={{
+           transform: `translate(${width}px, 2vh)`
+         }}
+         >
+           <ToggleButton></ToggleButton>
+        </div>
         <div className="content">{children}</div>
       </div>
     </React.Fragment>

@@ -4,6 +4,7 @@ import './App.css';
 import Content from './components/Content';
 import Sidebar from './components/Sidebar';
 import FireEffect from './components/FireEffect';
+import ToggleButton from './components/ToggleButton';
 
 import pythonImg from './images/python.png';
 import arduinoImg from './images/arduino.png';
@@ -57,6 +58,15 @@ class App extends Component {
 
     return (
       <div className="App">
+        <div className="sidebar">
+          <Sidebar width={200} height={"100vh"}>
+              <h1>웹</h1>
+              <h1>모바일</h1>
+              <h1>머신러닝</h1>
+              <h1>게임</h1>
+              <h1>로봇</h1>
+            </Sidebar>
+        </div>
         <div className="container-main">
           <div className="item-main">
             <FireEffect>불</FireEffect>
@@ -71,16 +81,6 @@ class App extends Component {
               {language_list_view}
 
             </div>
-          </div>
-          {/* Sidebar position이 absolute이어서 div위치를 이곳에 두어야 화면상 가장 앞에 출력됨 */}
-          <div className="sidebar">
-            <Sidebar width={200} height={"136vh"}>
-              <h1>웹</h1>
-              <h1>모바일</h1>
-              <h1>머신러닝</h1>
-              <h1>게임</h1>
-              <h1>로봇</h1>
-            </Sidebar>
           </div>
         </div>
       </div>

@@ -1,24 +1,13 @@
 .side-bar {
-    height: 100% !important;
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid;
-    border-radius: 0;
-    border-color: rgba(40,44,52, 0.693);
-    background-color:  rgb(40,44,52, 0.5);
-    transition: 0.8s ease;
-    margin-top: 150px;
+    text-align: center;
+    background-color: rgb(253, 186, 98);
+    transition: 1s ease;
     color: white;
 }
+
+/* 버튼 */
 .toggle-menu {
-    height: 50px;
-    border-top-right-radius: 10rem;
-    border-bottom-right-radius: 9rem;
-    width: 10px;
-    position: absolute;
-    outline: none;
-    z-index: 1;
-    background-color: rgba(254,193,1, 0.693);
-    border-color: rgba(254,193,1, 0.693);
-    border-left: 0;
+    display: block;
+    width: 60px;
+    z-index: 100;
 }
