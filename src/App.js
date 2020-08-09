@@ -14,37 +14,38 @@ import prologImg from './images/prolog.png';
 import rImg from './images/R_Programming.png';
 import raspberryPiImg from './images/RaspberryPi.png';
 
-const list=[
-  ["java", lispImg, "java2"],
-  ["web", lispImg, "web2"],
-  ["java", lispImg, "java"],
-  ["c++", lispImg, "c++"],
-  ["web", lispImg, "web"],
-  ["java", lispImg, "java"],
+const language_list = [
+  [["all","java"], lispImg, "java2"],
+  [["all","web"], lispImg, "web2"],
+  [["all","java"], lispImg, "java"],
+  [["all","c++"], lispImg, "c++"],
+  [["all","web"], lispImg, "web"],
+  [["all","java"], lispImg, "java"],
 ];
 
 class App extends Component {
     
   state = {
       display : true,
-      presentLanguage : ""
+      presentLanguage : "all"
   };
 
   hideComponents = () => {
     this.setState({display: false});
   }
 
-  showComponents = () => {
-    this.setState({
-      presentLanguage : "web"
-    })
-  }
+  /* 카테고리 클릭했을 때 함수 */
+  // OnClickComponents = () => {
+  //   this.setState({
+  //     presentLanguage : "web"
+  //   })
+  // }
 
   render(){
 
-    const data = list.map(i => 
+    const language_list_view = language_list.map(i => 
       (
-        i[0] === this.state.presentLanguage ? <Content image={i[1]} name={i[2]}></Content>:""
+        i[0].some(v => v === this.state.presentLanguage) ? <Content image={i[1]} name={i[2]}></Content>:""
       )
     );
 
@@ -57,8 +58,7 @@ class App extends Component {
           <div className="item">
             <div className="container-content">
             
-            <button onClick={this.showComponents}>웹만 보여주세요</button>
-            {data}
+            {language_list_view}
 
             </div>
           </div>
