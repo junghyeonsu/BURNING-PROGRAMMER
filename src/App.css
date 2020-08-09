@@ -45,6 +45,10 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+.sidebar {
+  position: absolute;
+  width: fit-content;
+}
 
 .item-main {
   background-color: #282c34;
