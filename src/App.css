@@ -47,8 +47,11 @@
 }
 
 .item-main {
+  background-color: #282c34;
+  color: white;
+  font-size: 3rem;
   font-family: 'Noto Sans KR', sans-serif;
-  padding: 5vh;
+  padding: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;

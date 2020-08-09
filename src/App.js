@@ -3,6 +3,7 @@ import './App.css';
 
 import Content from './components/Content';
 import Sidebar from './components/Sidebar';
+import FireEffect from './components/FireEffect';
 
 import pythonImg from './images/python.png';
 import arduinoImg from './images/arduino.png';
@@ -55,7 +56,12 @@ class App extends Component {
       <div className="App">
         <Sidebar></Sidebar>
         <div className="container-main">
-          <div className="item-main">불타는 개발자</div>
+          <div className="item-main">
+            <FireEffect>불</FireEffect> 
+            <FireEffect>타</FireEffect>
+            <FireEffect>는</FireEffect> 
+            개발자
+          </div>
           
           <div className="item">
             <div className="container-content">
