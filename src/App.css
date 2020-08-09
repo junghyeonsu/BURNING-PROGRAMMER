@@ -1,3 +1,7 @@
+/* 구글 폰트 import (500 medium) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+
 .App {
   background-color: #282c34;
   min-height: 100vh;
@@ -43,9 +47,11 @@
 }
 
 .item-main {
-  background-color: thistle;
-  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
   padding: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .item-content {

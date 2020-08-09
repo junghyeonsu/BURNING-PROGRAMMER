@@ -14,6 +14,8 @@ import prologImg from './images/prolog.png';
 import rImg from './images/R_Programming.png';
 import raspberryPiImg from './images/RaspberryPi.png';
 
+/* 프로그래밍 언어 리스트 */
+/* 순서 = 카테고리 배열(all = default), 이미지, 텍스트 */
 const language_list = [
   [["all","java"], lispImg, "java2"],
   [["all","web"], lispImg, "web2"],
@@ -53,7 +55,7 @@ class App extends Component {
       <div className="App">
         <Sidebar></Sidebar>
         <div className="container-main">
-          <div className="item-main">제목</div>
+          <div className="item-main">불타는 개발자</div>
           
           <div className="item">
             <div className="container-content">
