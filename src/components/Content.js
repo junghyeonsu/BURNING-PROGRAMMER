@@ -9,9 +9,13 @@ class Content extends Component {
     render(){
         return(
             <div className="Content">
-                <img className="Image" src={this.props.image}></img>
+                <a href="#">
+                <img src={this.props.image}></img>
                 <br />
-                {this.props.name}
+                <div className="Text">
+                    {this.props.name}
+                </div>
+                </a>
             </div>
         );
     }

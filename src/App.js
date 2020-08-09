@@ -3,6 +3,7 @@ import './App.css';
 
 import Content from './components/Content';
 import Sidebar from './components/Sidebar';
+import FireEffect from './components/FireEffect';
 
 import pythonImg from './images/python.png';
 import arduinoImg from './images/arduino.png';
@@ -14,37 +15,43 @@ import prologImg from './images/prolog.png';
 import rImg from './images/R_Programming.png';
 import raspberryPiImg from './images/RaspberryPi.png';
 
-const list=[
-  ["java", lispImg, "java2"],
-  ["web", lispImg, "web2"],
-  ["java", lispImg, "java"],
-  ["c++", lispImg, "c++"],
-  ["web", lispImg, "web"],
-  ["java", lispImg, "java"],
+/* 프로그래밍 언어 리스트 */
+/* 순서 = 카테고리 배열(all = default), 이미지, 텍스트 */
+const language_list = [
+  [["all","java"], javaImg, "Java"],
+  [["all","web"], pythonImg, "Python"],
+  [["all","java"], cPlusPlusImg, "C++"],
+  [["all","c++"], arduinoImg, "Arduino"],
+  [["all","web"], juliaImg, "Julia"],
+  [["all","java"], prologImg, "Prolog"],
+  [["all","java"], lispImg, "Lisp"],
+  [["all","java"], rImg, "R"],
+  [["all","java"], raspberryPiImg, "Raspberry Pi"],
 ];
 
 class App extends Component {
     
   state = {
       display : true,
-      presentLanguage : ""
+      presentLanguage : "all"
   };
 
   hideComponents = () => {
     this.setState({display: false});
   }
 
-  showComponents = () => {
-    this.setState({
-      presentLanguage : "web"
-    })
-  }
+  /* 카테고리 클릭했을 때 함수 */
+  // OnClickComponents = () => {
+  //   this.setState({
+  //     presentLanguage : "web"
+  //   })
+  // }
 
   render(){
 
-    const data = list.map(i => 
+    const language_list_view = language_list.map(i => 
       (
-        i[0] === this.state.presentLanguage ? <Content image={i[1]} name={i[2]}></Content>:""
+        i[0].some(v => v === this.state.presentLanguage) ? <Content image={i[1]} name={i[2]}></Content>:""
       )
     );
 
@@ -52,13 +59,17 @@ class App extends Component {
       <div className="App">
         <Sidebar></Sidebar>
         <div className="container-main">
-          <div className="item-main">제목</div>
+          <div className="item-main">
+            <FireEffect>불</FireEffect> 
+            <FireEffect>타</FireEffect>
+            <FireEffect>는</FireEffect> 
+            개발자
+          </div>
           
           <div className="item">
             <div className="container-content">
             
-            <button onClick={this.showComponents}>웹만 보여주세요</button>
-            {data}
+            {language_list_view}
 
             </div>
           </div>
