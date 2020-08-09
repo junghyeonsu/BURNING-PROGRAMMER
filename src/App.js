@@ -18,12 +18,15 @@ import raspberryPiImg from './images/RaspberryPi.png';
 /* 프로그래밍 언어 리스트 */
 /* 순서 = 카테고리 배열(all = default), 이미지, 텍스트 */
 const language_list = [
-  [["all","java"], lispImg, "java2"],
-  [["all","web"], lispImg, "web2"],
-  [["all","java"], lispImg, "java"],
-  [["all","c++"], lispImg, "c++"],
-  [["all","web"], lispImg, "web"],
-  [["all","java"], lispImg, "java"],
+  [["all","java"], javaImg, "Java"],
+  [["all","web"], pythonImg, "Python"],
+  [["all","java"], cPlusPlusImg, "C++"],
+  [["all","c++"], arduinoImg, "Arduino"],
+  [["all","web"], juliaImg, "Julia"],
+  [["all","java"], prologImg, "Prolog"],
+  [["all","java"], lispImg, "Lisp"],
+  [["all","java"], rImg, "R"],
+  [["all","java"], raspberryPiImg, "Raspberry Pi"],
 ];
 
 class App extends Component {
