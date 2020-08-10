@@ -1,0 +1,9 @@
+kotlin
+
+IntelliJ IDEA의 개발사 JetBrains에서 2011년에 공개한 프로그래밍 언어. 
+
+https://developer.android.com/kotlin/get-started?hl=ko
+
+안드로이드, 스프링 프레임워크, 톰캣, JavaScript, Java EE, HTML5, 
+iOS, 라즈베리 파이 등을 개발할 때 사용할 수 있다.
+
