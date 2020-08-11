@@ -1,0 +1,12 @@
+Solidity
+
+Solidity는 계약 지향 프로그래밍 언어로 다양한 블록체인 플랫폼의 스마트계약(Smart Contract) 작성 및 구현에 사용된다
+
+https://solidity.readthedocs.io/en/v0.7.0/
+
+ide로는 Remix IDE, EthFiddle를 사용한다.
+https://remix.ethereum.org			Remix
+https://ethfiddle.com/			EthFiddle
+
+이더리움 네트워크 스마트 계약을 위해 만들어졌다. OOP이며, JS, C++, python의 일부 구문을 가진다.
+ERC20이라는 이더리움 스마트 계약의 현재 표준을 설정했다.

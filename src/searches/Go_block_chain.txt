@@ -1,0 +1,12 @@
+Go
+
+Go(Golang)는 2009년 구글이 개발한[2] 프로그래밍 언어이다. 가비지 컬렉션 기능이 있고, 병행성(concurrent)을 잘 지원하는 컴파일 언어다.
+
+https://golang.org/
+
+ide로는 LiteIDE, Eclipse, InteliJ등을 사용한다.
+https://github.com/visualfc/liteide
+https://www.eclipse.org/
+https://www.jetbrains.com/idea/
+
+-Ethereum, HyperledgerFabric, GoChain등의 블록체인 개발에 이용된다.
