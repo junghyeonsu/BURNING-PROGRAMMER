@@ -1,0 +1,5 @@
+Haskell
+
+하스켈 또는 해스켈Haskell)은 순수 함수형 프로그래밍 언어이다.
+
+https://www.haskell.org/

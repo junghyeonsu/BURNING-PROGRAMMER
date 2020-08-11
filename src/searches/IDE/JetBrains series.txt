@@ -1,0 +1,7 @@
+JetBrains series
+
+젯브레인즈 (JetBrains)라는 프로그래머와 프로젝트 매니저를 대상으로 하는 도구들을 개발하는 소프트웨어 개발 업체에서 만든 IDE들
+
+https://www.jetbrains.com/ko-kr/products.html#lang=csharp&lang=dart
+
+지원 언어 : C/C++, C#, Dart, DSL, F#, Go, Groovy, HTML, Java, ...

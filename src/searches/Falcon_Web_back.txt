@@ -1,0 +1,8 @@
+Falcon
+
+- 대규모 앱 백엔드 및 마이크로 서비스 구축을 위한 안정적인 고성능 python 웹 프레임 워크
+- rest 아키텍처 스타일 권장
+
+https://falcon.readthedocs.io/en/stable/
+
+파이썬 웹 프레임워크
