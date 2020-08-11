@@ -35,7 +35,9 @@ export const Sidebar = ({ width, height, children }) => {
          >
            <ToggleButton></ToggleButton>
         </div>
-        <div className="content">{children}</div>
+        <div className="content">
+          {children}
+        </div>
       </div>
     </React.Fragment>
   );

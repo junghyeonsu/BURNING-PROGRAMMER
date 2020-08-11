@@ -29,7 +29,6 @@ class ToggleButton extends Component {
                 three_degree : 0,
                 three_translate_x : 0,
                 three_translate_y : 0,
-
              });
         } else {
             this.setState({ 
