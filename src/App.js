@@ -4,7 +4,7 @@ import { inject, observer } from 'mobx-react';
 
 import Content from './components/Content';
 import Sidebar from './components/Sidebar';
-import FireEffect from './components/FireEffect';
+import HeaderText from './components/HeaderText';
 import ToggleButton from './components/ToggleButton';
 import SidebarButton from './components/SidebarButton';
 
@@ -71,7 +71,6 @@ const language_list = [
 @observer
 class App extends Component {
    render() {
-
     const { store } = this.props;
 
     const language_list_view = language_list.map(i =>
@@ -82,18 +81,14 @@ class App extends Component {
 
     return (
       <div className="App">
+
         <div className="sidebar">
-          <Sidebar width={200} height={"100vh"}>
-              <h1>카테고리</h1>
-              <SidebarButton click={this.OnClickSidebarButton}>자바</SidebarButton>
-            </Sidebar>
+          <Sidebar width={200} height={"100vh"} />
         </div>
+
         <div className="container-main">
           <div className="item-main">
-            <FireEffect>불</FireEffect>
-            <FireEffect>타</FireEffect>
-            <FireEffect>는</FireEffect>
-            개발자
+            <HeaderText />
           </div>
           
           <div className="item-content">
@@ -101,6 +96,7 @@ class App extends Component {
               {language_list_view}
             </div>
           </div>
+
         </div>
       </div>
     );
