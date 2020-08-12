@@ -6,7 +6,6 @@ import Content from './Content';
 @inject('store')
 @observer
 class ContentContainer extends Component {
-
     render() {
         const { store } = this.props;
         const language_list_view = store.languageList.map(i =>(
@@ -16,7 +15,7 @@ class ContentContainer extends Component {
 
         return(
             <>
-            {language_list_view}
+                {language_list_view}
             </>
         );
     }

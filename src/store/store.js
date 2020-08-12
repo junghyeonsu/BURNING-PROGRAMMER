@@ -48,15 +48,20 @@ export default class UserStore {
   /* 프로그래밍 언어 리스트 */
   /* 순서 = 카테고리 배열(all = default), 이미지, 텍스트 */
   @observable languageList = [
-    [["all", "자바"], javaImg, "Java"],
-    [["all", "web"], pythonImg, "Python"],
+    [["all", "웹", "백"], javaImg, "Java"],
+    [["all", "웹", "프론트"], pythonImg, "Python"],
     [["all", "자바"], cPlusPlusImg, "C++"],
     [["all", "c++"], arduinoImg, "Arduino"],
     [["all", "web"], juliaImg, "Julia"],
     [["all", "자바"], prologImg, "Prolog"],
     [["all", "자바"], lispImg, "Lisp"],
-    [["all", "java"], rImg, "R"],
+    [["all", "자바"], rImg, "R"],
     [["all", "java"], raspberryPiImg, "Raspberry Pi"],
+    [["all", "웹", "프론트"], CSSImg, "CSS"],
+    [["all", "웹", "프론트"], ReactImg, "React"],
+    [["all", "웹", "백"], PHPImg, "PHP"],
+    [["all", "웹", "프론트"], javaScriptImg, "Javascript"],
+    [["all", "웹", "프론트"], HTMLImg, "HTML"],
   ];
 
   @action changePresentLanguage = (e) => {
