@@ -12,6 +12,8 @@
   display: grid;
   background-color: white;
   grid-template-rows: 150px auto;
+  text-align: center;
+  min-height: 150px;
 }
 
 /* width가 800px 이상일 때 적용되는 css */
@@ -62,13 +64,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.item-content {
-  text-align: center;
-  margin: 1vh;
-  padding: 4vh;
-  min-height: 150px;
 }
 
 /* 원래 있던 css들 */
