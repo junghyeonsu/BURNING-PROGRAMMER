@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { inject, observer } from 'mobx-react';
 
 import Content from './components/Content';
 import Sidebar from './components/Sidebar';
@@ -65,29 +66,17 @@ const language_list = [
   [["all", "java"], raspberryPiImg, "Raspberry Pi"],
 ];
 
+
+@inject('store')
+@observer
 class App extends Component {
+   render() {
 
-  state = {
-    display: true,
-    presentLanguage: "all"
-  };
-
-  hideComponents = () => {
-    this.setState({ display: false });
-  }
-
-  /* 카테고리 클릭했을 때 함수 */
-  OnClickSidebarButton = (e) => {
-    this.setState({
-      presentLanguage : e.target.id
-    })
-  }
-
-  render() {
+    const { store } = this.props;
 
     const language_list_view = language_list.map(i =>
       (
-        i[0].some(v => v === this.state.presentLanguage) ? <Content image={i[1]} name={i[2]}></Content> : ""
+        i[0].some(v => v === store.presentLanguage) ? <Content image={i[1]} name={i[2]}></Content> : ""
       )
     );
 
@@ -117,4 +106,5 @@ class App extends Component {
     );
   }
 }
+
 export default App;
