@@ -1,21 +1,6 @@
 /* 구글 폰트 import (500 medium) */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 
-
-.App {
-  background-color: #282c34;
-  min-height: 100vh;
-  padding: 5vh;
-}
-
-.container-main {
-  display: grid;
-  background-color: white;
-  grid-template-rows: 150px auto;
-  text-align: center;
-  min-height: 150px;
-}
-
 /* width가 800px 이상일 때 적용되는 css */
 @media (min-width: 800px) {
   .container-content {
@@ -55,7 +40,7 @@
   z-index: 100;
 }
 
-.item-main {
+.header_text {
   background-color: #282c34;
   color: white;
   font-size: 3rem;

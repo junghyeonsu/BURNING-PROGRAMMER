@@ -1,24 +1,24 @@
 import React, {Component} from 'react';
 import { inject, observer } from 'mobx-react';
 import Content from './Content';
-// import '../../styles/WebClickContent.css' 
+import '../../../App.css';
 
 @inject('store')
 @observer
-class WebClickContent extends Component {
-    render(){
+class AllContent extends Component {
+    render() {
         const { store } = this.props;
         const language_list_view = store.languageList.map(i =>(
-            i[0].some(v => v === store.presentLanguage) ? <Content image={i[1]} name={i[2]}></Content> : ""
+             <Content image={i[1]} name={i[2]}></Content>
           )
         );
 
         return(
-            <>
+            <div className="container-content">
                 {language_list_view}
-            </>
+            </div>
         );
     }
 }
 
-export default WebClickContent;
+export default AllContent;

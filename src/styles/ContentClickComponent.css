@@ -1,0 +1,52 @@
+/* 구글 폰트 import (500 medium) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+.click-content-container {
+  background-color: white;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-align: center;
+}
+
+.header{
+    margin-top: 3rem;
+    border: solid 1px black;
+    padding: 4%;
+    font-size: 3rem;
+}
+
+.text {
+    margin-top: 2rem;
+    border: solid 1px black;
+    padding: 2%;
+    font-size: 2rem;
+}
+
+/* width가 800px 이상일 때 적용되는 css */
+@media (min-width: 800px) {
+    .container {
+      display: grid;
+      
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-bottom: 5%;
+      padding-top: 5%;
+      
+      grid-auto-rows: minmax(100px, auto);
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+  
+  /* width가 800px 이하일 때 적용되는 css */
+  @media (max-width: 800px) {
+    .container {
+      display: grid;
+      
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-bottom: 5%;
+      padding-top: 5%;
+      
+      grid-auto-rows: minmax(100px, auto);
+      grid-template-columns: 1fr 1fr;
+    }
+  }
