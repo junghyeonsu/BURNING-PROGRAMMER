@@ -8,8 +8,13 @@ import '../../../styles/ContentClickComponent.css'
 class WebClickContent extends Component {
     render(){
         const { store } = this.props;
-        const language_list_view = store.languageList.map(i =>(
-            i[0].some(v => v === store.presentLanguage) ? <Content image={i[1]} name={i[2]}></Content> : ""
+        const language_front_list = store.languageList.map(i =>(
+            i[0].some(v => v === "프론트") ? <Content image={i[1]} name={i[2]}></Content> : ""
+          )
+        );
+
+        const language_back_list = store.languageList.map(i =>(
+            i[0].some(v => v === "백") ? <Content image={i[1]} name={i[2]}></Content> : ""
           )
         );
 
@@ -22,13 +27,13 @@ class WebClickContent extends Component {
                     프론트엔드
                 </div>
                 <div className="container">
-                    {language_list_view} 
+                    {language_front_list} 
                 </div>
                 <div className="text">
                     백엔드
                 </div>
                 <div className="container">
-                    {language_list_view}
+                    {language_back_list}
                 </div>
             </div>
         );

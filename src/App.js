@@ -6,10 +6,8 @@ import { inject, observer } from 'mobx-react';
 import Sidebar from './components/Home/Sidebar/Sidebar';
 import HeaderText from './components/Home/Header/HeaderText';
 
-
 //언어별
 import Python from './components/InformationContents/Python';
-
 
 //분야별
 import Web from './components/Home/Content/WebClickContent';
