@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { inject, observer } from 'mobx-react';
-
 import Content from './Content';
+import '../../App.css';
 
 @inject('store')
 @observer
@@ -14,9 +14,9 @@ class AllContent extends Component {
         );
 
         return(
-            <>
+            <div className="container-content">
                 {language_list_view}
-            </>
+            </div>
         );
     }
 }

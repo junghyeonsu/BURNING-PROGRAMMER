@@ -24,7 +24,7 @@ class App extends Component {
           <div className="item-main">
             <HeaderText />
           </div>
-            <div className="container-content">
+            <div>
               <ContentContainer />
           </div>
         </div>
