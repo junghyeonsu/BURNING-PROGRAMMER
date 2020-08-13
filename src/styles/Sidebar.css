@@ -5,9 +5,14 @@
     color: white;
 }
 
-/* 버튼 */
+/* 토글 버튼 */
 .toggle-menu {
     display: block;
     width: 60px;
     z-index: 100;
+}
+
+/* 카테고리 버튼 */ 
+.content {
+    text-decoration: none;
 }
