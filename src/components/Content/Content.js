@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../styles/Content.css' 
+import '../../styles/Content.css' 
 // import { Transition, TransitionGroup } from "react-transition-group";
 // import posed, { PoseGroup } from 'react-pose';
 

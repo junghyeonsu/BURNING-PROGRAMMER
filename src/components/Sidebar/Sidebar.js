@@ -1,4 +1,4 @@
-import "../styles/Sidebar.css";
+import "../../styles/Sidebar.css";
 import React from "react";
 
 import ToggleButton from "./ToggleButton";
