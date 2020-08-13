@@ -44,7 +44,7 @@ import VueDotJSImg from '../images/Vue.js.png';
 @autobind
 export default class UserStore {
   @observable presentLanguage = "all";
-
+  @observable categoryClicked = false;
   /* 프로그래밍 언어 리스트 */
   /* 순서 = 카테고리 배열(all = default), 이미지, 텍스트 */
   @observable languageList = [
@@ -66,6 +66,17 @@ export default class UserStore {
 
   @action changePresentLanguage = (e) => {
       this.presentLanguage = e.target.id;
-      console.log("성공");
+      console.log("changePresentLanguage");
+  }
+
+  @action categoryOnClicked = () => {
+    this.categoryClicked = true;
+    console.log("categoryOnClicked");
+  }
+
+  @action categoryOnClickedAndchangePresentLanguage = (e) => {
+    this.presentLanguage = e.target.id;
+    this.categoryClicked = true;
+    console.log("categoryOnClickedAndchangePresentLanguage");
   }
 }

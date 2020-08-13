@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import { inject, observer } from 'mobx-react';
 
-import ContentContainer from './components/ContentContainer';
-import Sidebar from './components/Sidebar';
-import HeaderText from './components/HeaderText';
+import ContentContainer from './components/Content/ContentContainer';
+import Sidebar from './components/Sidebar/Sidebar';
+import HeaderText from './components/Header/HeaderText';
 
 import { Transition, TransitionGroup } from "react-transition-group";
 

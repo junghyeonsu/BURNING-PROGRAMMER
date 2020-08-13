@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../styles/ToggleButton.css' 
+import '../../styles/ToggleButton.css' 
 
 class ToggleButton extends Component {
 

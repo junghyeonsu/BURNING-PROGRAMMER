@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../styles/SidebarButton.css' 
+import '../../styles/SidebarButton.css' 
 import { inject, observer } from 'mobx-react';
 
 /*
@@ -12,7 +12,7 @@ class SidebarButton extends Component {
     render(){
         const { store } = this.props;
         return(
-            <div id={this.props.children} onClick={store.changePresentLanguage} className="btn btn-three">
+            <div id={this.props.children} onClick={store.categoryOnClickedAndchangePresentLanguage} className="btn btn-three">
                     <span>{this.props.children}</span>
             </div>
         );
