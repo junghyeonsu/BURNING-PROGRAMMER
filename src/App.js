@@ -8,7 +8,7 @@ import HeaderText from './components/Home/Header/HeaderText';
 
 
 //언어별
-import Python from './components/Python/Python';
+import Python from './components/InformationContents/Python';
 
 
 //분야별
