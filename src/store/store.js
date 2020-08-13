@@ -1,7 +1,6 @@
-import React, {Component} from 'react';
-import { inject, observer } from 'mobx-react';
-
-import Content from './Content';
+// stores/userStore.js
+import { observable, action } from "mobx";
+import { autobind } from 'core-decorators';
 
 import dotNetImg from '../images/.Net.png';
 import AngularJSImg from '../images/AngularJS.png'
@@ -42,35 +41,42 @@ import UnityImg from '../images/Unity.png';
 import ViboraImg from '../images/Vibora.png';
 import VueDotJSImg from '../images/Vue.js.png';
 
-const language_list = [
-    [["all", "자바"], javaImg, "Java"],
-    [["all", "web"], pythonImg, "Python"],
+@autobind
+export default class UserStore {
+  @observable presentLanguage = "all";
+  @observable categoryClicked = false;
+  /* 프로그래밍 언어 리스트 */
+  /* 순서 = 카테고리 배열(all = default), 이미지, 텍스트 */
+  @observable languageList = [
+    [["all", "web", "백"], javaImg, "Java"],
+    [["all", "web", "프론트"], pythonImg, "Python"],
     [["all", "자바"], cPlusPlusImg, "C++"],
     [["all", "c++"], arduinoImg, "Arduino"],
     [["all", "web"], juliaImg, "Julia"],
     [["all", "자바"], prologImg, "Prolog"],
     [["all", "자바"], lispImg, "Lisp"],
-    [["all", "java"], rImg, "R"],
+    [["all", "자바"], rImg, "R"],
     [["all", "java"], raspberryPiImg, "Raspberry Pi"],
+    [["all", "web", "프론트"], CSSImg, "CSS"],
+    [["all", "web", "프론트"], ReactImg, "React"],
+    [["all", "web", "백"], PHPImg, "PHP"],
+    [["all", "web", "프론트"], javaScriptImg, "Javascript"],
+    [["all", "web", "프론트"], HTMLImg, "HTML"],
   ];
 
+  @action changePresentLanguage = (e) => {
+      this.presentLanguage = e.target.id;
+      console.log("changePresentLanguage");
+  }
 
-@inject('store')
-@observer
-class ContentContainer extends Component {
-    render() {
-        const { store } = this.props;
-        const language_list_view = language_list.map(i =>(
-            i[0].some(v => v === store.presentLanguage) ? <Content onClick={this.props.onClick} image={i[1]} name={i[2]}></Content> : ""
-          )
-        );
+  @action categoryOnClicked = () => {
+    this.categoryClicked = true;
+    console.log("categoryOnClicked");
+  }
 
-        return(
-            <>
-            {language_list_view}
-            </>
-        );
-    }
+  @action categoryOnClickedAndchangePresentLanguage = (e) => {
+    this.presentLanguage = e.target.id;
+    this.categoryClicked = true;
+    console.log("categoryOnClickedAndchangePresentLanguage");
+  }
 }
-
-export default ContentContainer;

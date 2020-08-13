@@ -1,0 +1,12 @@
+JAVA
+
+사용이 간편하고 디버깅이 쉽다. 패키지 서비스, 대규모 프로젝트와의 단순화된 작업, 데이터의 그래픽 표현 및 사용자 인터랙션 등 다양한 이점을 제공한다. 
+표준 위젠 툴킷인 SWT와 스윙이 통합되어 있어서 그래픽과 인터페이스를 표현할 수 있다. 
+
+java.com/ko/
+
+ide로는 eclipse, IntelliJ를 사용한다.
+https://help.eclipse.org/2020-06/index.jsp
+https://www.jetbrains.com/ko-kr/idea/
+
+검색 알고리즘, 인공 신경망, 유전자 프로그래밍 등 다양한 분야에서 사용된다.

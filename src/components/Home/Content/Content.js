@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../styles/Content.css' 
+import '../../../styles/Content.css' 
 // import { Transition, TransitionGroup } from "react-transition-group";
 // import posed, { PoseGroup } from 'react-pose';
 
@@ -40,6 +40,7 @@ class Content extends Component {
 
     render(){
         return(
+            
             <div className="Content">
                 <Link onClick={this.props.onClick} to={this.props.name}>
                     <img src={this.props.image}></img>

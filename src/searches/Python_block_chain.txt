@@ -1,0 +1,8 @@
+Python
+
+구문이 간단하고 배우기가 쉽다. 다양한 프로그래밍 스타일을 제공한다. 객체지향, 기능 및 절차 프로그래밍 등을 지원한다.
+
+www.python.org/ 				파이썬 공식 홈페이지
+
+IBM의 Hyperledger는 Sawtooth에서 구현한 암호화폐인데, 파이썬 용으로 Pythereium도 만들었다.
+Ethereum, HyperledgerFabric, Neo, Steaem등의 블록체인 개발에 사용된다.

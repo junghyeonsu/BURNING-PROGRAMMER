@@ -1,0 +1,12 @@
+C#
+
+C#은 마이크로소프트에서 개발한 객체 지향 프로그래밍 언어로, .NET 프레임워크의 한 부분으로 만들었으며 나중에 ECMA (ECMA-334)와 ISO (ISO/IEC/23270)의 표준으로 자리잡았다. C++와 JAVA의 문법과 비슷한 문법을 가지고 있다.
+
+https://docs.microsoft.com/ko-kr/dotnet/csharp/		MicroSoft의 C# 설명서
+
+IDE로는 visual studio와 Rider IDE를 사용한다.
+https://visualstudio.microsoft.com/ko/vs/community/		visual studio
+https://www.jetbrains.com/ko-kr/rider/				Rider
+
+엔터프라이즈급 애플리케이션에 적합하다. 대규모 블록체인 구현을 위해 사용된다. 마이크로소프트의 지원을 받는다.
+STRAT, Neo, IOTA등의 블록체인을 개발하는 데 사용된다.

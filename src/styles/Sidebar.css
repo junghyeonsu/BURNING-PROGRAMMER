@@ -1,0 +1,13 @@
+.side-bar {
+    text-align: center;
+    background-color: rgb(255, 162, 41);
+    transition: 1s ease;
+    color: white;
+}
+
+/* 버튼 */
+.toggle-menu {
+    display: block;
+    width: 60px;
+    z-index: 100;
+}

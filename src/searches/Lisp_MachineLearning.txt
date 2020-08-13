@@ -1,0 +1,13 @@
+Lisp
+
+현대의 컴퓨터 고급 언어 중 두 번쨰로 오래된 것이다. 언어 자체가 새로운 기능을 탑재하기 유연하기도 하고, 오랫동안 학계의 특정 분야에서 거의 표준적으로 사용된 언어라 후대 언어에 끼친 영향이 크다.
+
+www.lisp-lang.org/ 				리스프 공식 홈페이지
+
+IDE로는 emacs와 SLIME을 사용한다.
+https://www.gnu.org/software/emacs/manual/html_node/eintr/	emacs
+https://common-lisp.net/project/slime/			SLIME
+
+동적 언어로 자동으로 불필요한 정보를 정리하는 기능으로 우수한 프로토타입을 제작할 수 있다.
+상징적인 정보를 처리하는 데 적합하다.
+식의 전개, 인수분해, 미적분, 정리증명, 게임 문제, 자연어 처리 등에 적합하다.
