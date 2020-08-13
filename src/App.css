@@ -1,5 +1,15 @@
 .App {
+  background-color: #282c34;
+  min-height: 100vh;
+  padding: 5vh;
+}
+
+.container-main {
+  /* display: grid; */
+  background-color: white;
+  grid-template-rows: 150px auto;
   text-align: center;
+  min-height: 300px;
 }
 
 .App-logo {
