@@ -64,19 +64,21 @@ export default class UserStore {
     [["all", "web", "프론트"], HTMLImg, "HTML"],
   ];
 
+  /* ImformationContents 에서 Image 찾는 함수 */
+  @action findImage = (language) => {
+    var image;
+    this.languageList.map(i => {
+      if(i[2] === language){
+        image = i[1];
+        console.log(image);
+      }
+    });
+    return image;
+  }
+
+  /* 카테고리를 클릭했을 때 presentLanguage를 변경시키는 함수 */
   @action changePresentLanguage = (e) => {
       this.presentLanguage = e.target.id;
       console.log("changePresentLanguage");
-  }
-
-  @action categoryOnClicked = () => {
-    this.categoryClicked = true;
-    console.log("categoryOnClicked");
-  }
-
-  @action categoryOnClickedAndchangePresentLanguage = (e) => {
-    this.presentLanguage = e.target.id;
-    this.categoryClicked = true;
-    console.log("categoryOnClickedAndchangePresentLanguage");
   }
 }

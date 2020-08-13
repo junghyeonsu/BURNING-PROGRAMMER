@@ -1,0 +1,22 @@
+.InformationItem {
+    flex: 1;
+    padding: 20px 32px;
+    padding-bottom: 48px;
+    overflow-y: auto;
+    /* border : 1px solid black; */
+    margin : 10px;
+    border-radius:7px
+}
+
+.InformationItem img {
+    max-width: 20rem;
+    max-height: 20rem;
+}
+
+.Information-Container{
+    flex: 1;
+    padding: 20px 32px;
+    padding-bottom: 48px;
+    overflow-y: auto;
+    text-align: center;
+}
