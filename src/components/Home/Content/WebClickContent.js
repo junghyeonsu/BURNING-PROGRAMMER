@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { inject, observer } from 'mobx-react';
 import Content from './Content';
-import '../../styles/ContentClickComponent.css' 
+import '../../../styles/ContentClickComponent.css' 
 
 @inject('store')
 @observer
@@ -14,7 +14,7 @@ class WebClickContent extends Component {
         );
 
         return(
-            <>  
+            <div className="click-content-container">
                 <div className="header">
                     웹사이트
                 </div>
@@ -30,7 +30,7 @@ class WebClickContent extends Component {
                 <div className="container">
                     {language_list_view}
                 </div>
-            </>
+            </div>
         );
     }
 }

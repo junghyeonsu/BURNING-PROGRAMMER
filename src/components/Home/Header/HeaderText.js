@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../../styles/HeaderText.css' 
+import '../../../styles/HeaderText.css' 
 
 const text = ["불", "타", "는"];
 

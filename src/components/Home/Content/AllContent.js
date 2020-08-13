@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { inject, observer } from 'mobx-react';
 import Content from './Content';
-import '../../App.css';
+import '../../../App.css';
 
 @inject('store')
 @observer

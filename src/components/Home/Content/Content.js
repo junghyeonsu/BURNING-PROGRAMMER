@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../../styles/Content.css' 
+import '../../../styles/Content.css' 
 // import { Transition, TransitionGroup } from "react-transition-group";
 // import posed, { PoseGroup } from 'react-pose';
 
@@ -29,6 +29,9 @@ react-transition-group 참고 사이트
 //       transition: { duration: 200 }
 //     }
 //   });
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
+
 
 class Content extends Component {
     state = {
@@ -37,14 +40,15 @@ class Content extends Component {
 
     render(){
         return(
+            
             <div className="Content">
-                <a href="#">
+                <Link onClick={this.props.onClick} to={this.props.name}>
                     <img src={this.props.image}></img>
                     <br />
                     <div className="Text">
                         {this.props.name}
                     </div>
-                </a>
+                </Link>
             </div>
         );
     }
