@@ -113,3 +113,12 @@ body .fire .flames .flame:nth-child(4) {
         bottom: 150%;
    }
 }
+
+#HomeButton {
+    color: #fdac01;
+    position: fixed;
+    right: 15px;
+    top : 15px;
+    width: 40px;
+    height: 40px;
+}
