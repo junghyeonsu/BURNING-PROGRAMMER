@@ -7,7 +7,8 @@ import Sidebar from './components/Home/Sidebar/Sidebar';
 import HeaderText from './components/Home/Header/HeaderText';
 
 //언어별
-import Python from './components/InformationContents/Python';
+import Python from './components/InformationContents/kotlin_image';
+import Net from './components/InformationContents/Net';
 
 //분야별
 import Web from './components/Home/Content/WebClickContent';
@@ -21,13 +22,13 @@ import MachineLearning from './components/Home/Content/MachineLearningClickConte
 
 //필요 라이브러리
 import { Transition, TransitionGroup } from "react-transition-group";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 // https://www.npmjs.com/package/react-animation-components 참고할거임.
 
 @inject('store')
-@observer 
+@observer
 class App extends Component {
    render() {
     return (
@@ -50,8 +51,10 @@ class App extends Component {
           <Route exact path="/Cloud" component={Cloud}/>
           <Route exact path="/Game" component={Game}/>
           <Route exact path="/Robot" component={Robot}/>
-
           <Route exact path="/Python" component={Python}/>
+          <Route exact path="/Net" component={Net}/>
+
+
         </Switch>
       </Router>
     );
