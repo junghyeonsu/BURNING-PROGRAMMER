@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 
 @keyframes fade-in {
   from {
@@ -22,36 +23,51 @@
 .header{
   font-family: 'Black Han Sans', sans-serif;
   color: white;
-  margin-top: 1rem;
   background-color: rgb(247, 189, 83);
   padding: 3%;
   font-size: 3rem;
   animation: fade-in 1s;
+  transition: all 0.5s ease;
 }
 
-/* 맨 위에 영역의 설명 쓰는 부분 */
-.header_information{
-  font-family: 'Noto Sans KR', sans-serif;
+/* 설명 쓰는 부분 */
+.information{
+  font-family: 'Gamja Flower', cursive;
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  background-color: white;
+  color: black;
+  width: 40%;
+  margin: 2% auto;
+  padding: 20px;
+  transition: all 0.5s ease;	
+}
+
+.information:hover {
+  transform: scale(1.05);
 }
 
 /* 세분화한 곳 (ex : 프론트엔드, 백엔드 ) */
 .text {
   font-family: 'Stylish', sans-serif;
-  margin-top: 1rem;
   background-color: rgb(248, 221, 112);
   color: white;
   padding: 1%;
   font-size: 2.5rem;
   animation: fade-in 2s;
+  transition: all 0.5s ease;
 }
 
-/* 세분화한 곳의 설명 쓰는 부분 */
-.text_information {
-  font-family: 'Noto Sans KR', sans-serif;
-  margin-top: 1rem;
-  font-size: 1rem;
+.text_title,
+.header_title{
+  transition: all 0.5s ease;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.text_title:hover,
+.header_title:hover{
+  transform: scale(1.1);
 }
 
 /* 컨텐츠들 보여주는 곳 */
