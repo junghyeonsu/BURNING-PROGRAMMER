@@ -21,16 +21,25 @@ class WebClickContent extends Component {
         return(
             <div className="click-content-container">
                 <div className="header">
-                    웹사이트
+                    웹 사이트
+                    <div className="header_information">
+                        웹사이트란?
+                    </div>
                 </div>
                 <div className="text">
                     프론트엔드
+                    <div className="text_information">
+                        프론트엔드란?
+                    </div>
                 </div>
                 <div className="container">
                     {language_front_list} 
                 </div>
                 <div className="text">
                     백엔드
+                    <div className="text_information">
+                        백엔드란?
+                    </div>
                 </div>
                 <div className="container">
                     {language_back_list}

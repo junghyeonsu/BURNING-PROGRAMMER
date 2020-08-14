@@ -1,5 +1,7 @@
 /* 구글 폰트 import (500 medium) */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 
 @keyframes fade-in {
   from {
@@ -9,31 +11,50 @@
     opacity: 1;
   }
 }
-
+/* 전체를 감싸는 클래스 */
 .click-content-container {
   background-color: white;
   font-family: 'Noto Sans KR', sans-serif;
   text-align: center;
 }
 
+/* 맨 위에 영역 */
 .header{
-    color: white;
-    margin-top: 1rem;
-    background-color: rgb(247, 189, 83);
-    padding: 3%;
-    font-size: 3rem;
-    animation: fade-in 1s;
+  font-family: 'Black Han Sans', sans-serif;
+  color: white;
+  margin-top: 1rem;
+  background-color: rgb(247, 189, 83);
+  padding: 3%;
+  font-size: 3rem;
+  animation: fade-in 1s;
 }
 
+/* 맨 위에 영역의 설명 쓰는 부분 */
+.header_information{
+  font-family: 'Noto Sans KR', sans-serif;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* 세분화한 곳 (ex : 프론트엔드, 백엔드 ) */
 .text {
-    margin-top: 1rem;
-    background-color: rgb(255, 234, 152);
-    color: white;
-    padding: 1%;
-    font-size: 2rem;
-    animation: fade-in 2s;
+  font-family: 'Stylish', sans-serif;
+  margin-top: 1rem;
+  background-color: rgb(248, 221, 112);
+  color: white;
+  padding: 1%;
+  font-size: 2.5rem;
+  animation: fade-in 2s;
 }
 
+/* 세분화한 곳의 설명 쓰는 부분 */
+.text_information {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* 컨텐츠들 보여주는 곳 */
 /* width가 800px 이상일 때 적용되는 css */
 @media (min-width: 800px) {
     .container {
