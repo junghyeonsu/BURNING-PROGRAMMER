@@ -32,7 +32,7 @@ a {
     font-family: 'Kanit', sans-serif;
     font-size: 2rem;
     transition: all 1.5s cubic-bezier(.25,.8,.25,1);
-    animation: fade-in 1.5s;
+    animation: fade-in 3s;
 }
 
 /* .Content.entering,

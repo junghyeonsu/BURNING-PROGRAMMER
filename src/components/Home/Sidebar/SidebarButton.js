@@ -14,8 +14,8 @@ class SidebarButton extends Component {
     render(){
         const { store } = this.props;
         return(
-            <Link to={this.props.children}>
-                <div id={this.props.children} onClick={store.categoryOnClickedAndchangePresentLanguage} className="btn btn-three">
+            <Link style={{textDecoration: 'none'}} to={this.props.children}>
+                <div id={this.props.children} onClick={store.changePresentLanguage} className="btn btn-three">
                     <span>{this.props.children}</span>
                 </div>
             </Link>

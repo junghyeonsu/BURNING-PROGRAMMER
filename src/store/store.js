@@ -62,21 +62,47 @@ export default class UserStore {
     [["all", "web", "백"], PHPImg, "PHP"],
     [["all", "web", "프론트"], javaScriptImg, "Javascript"],
     [["all", "web", "프론트"], HTMLImg, "HTML"],
+    [["all",], dotNetImg, ".Net"],
+    [["all",], AngularJSImg, "Angular"],
+    [["all",], BootstrapImg, "Bootstrap"],
+    [["all",], ClojureImg, "Clojure"],
+    [["all",], djangoImg, "Django"],
+    [["all",], ElixirImg, "Elixir"],
+    [["all",], FalconImg, "Falcon"],
+    [["all",], FlaskImg, "Flask"],
+    [["all",], HaskellImg, "Haskell"],
+    [["all",], kotlinImg, "Kotlin"],
+    [["all",], LaravelImg, "Laravel"],
+    [["all",], MySQLImg, "MySQL"],
+    [["all",], NodeDotJSImg, "Node.js"],
+    [["all",], react_nativeImg, "React Native"],
+    [["all",], PostgreSQLImg, "Postgre SQL"],
+    [["all",], RubyImg, "Ruby"],
+    [["all",], RubyOnRailsImg, "Ruby on Rails"],
+    [["all",], SanicImg, "Sanic"],
+    [["all",], ScalaImg, "Scala"],
+    [["all",], SwiftImg, "Swift"],
+    [["all",], TornadoImg, "Tornado"],
+    [["all",], UnityImg, "Unity"],
+    [["all",], ViboraImg, "Vibora"],
+    [["all",], VueDotJSImg, "Vue.js"],
   ];
 
+  /* ImformationContents 에서 Image 찾는 함수 */
+  @action findImage = (language) => {
+    var image;
+    this.languageList.map(i => {
+      if(i[2] === language){
+        image = i[1];
+        console.log(image);
+      }
+    });
+    return image;
+  }
+
+  /* 카테고리를 클릭했을 때 presentLanguage를 변경시키는 함수 */
   @action changePresentLanguage = (e) => {
       this.presentLanguage = e.target.id;
       console.log("changePresentLanguage");
-  }
-
-  @action categoryOnClicked = () => {
-    this.categoryClicked = true;
-    console.log("categoryOnClicked");
-  }
-
-  @action categoryOnClickedAndchangePresentLanguage = (e) => {
-    this.presentLanguage = e.target.id;
-    this.categoryClicked = true;
-    console.log("categoryOnClickedAndchangePresentLanguage");
   }
 }
