@@ -39,7 +39,7 @@ export const Sidebar = ({ width, height, children }) => {
         <div className="content">
             <h1>카테고리</h1>
             <SidebarButton>Home</SidebarButton>
-            <SidebarButton>web</SidebarButton>
+            <SidebarButton>Web</SidebarButton>
         </div>
 
       </div>
