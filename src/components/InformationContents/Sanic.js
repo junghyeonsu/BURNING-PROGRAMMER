@@ -6,15 +6,15 @@ import DescriptionItem from '../Information/InformationItem'
 
 @inject('store')
 @observer 
-class Python extends Component {
+class Sanic extends Component {
   
   render() {
     const { store } = this.props;
 
-    const Image = store.findImage("Python");
+    const Image = store.findImage("Sanic");
 
     const list = [
-      <DescriptionItem image={<img src={Image} alt="My Image"></img>} text={"Python"} />,
+      <DescriptionItem image={<img src={Image} alt="My Image"></img>} text={"Sanic"} />,
       <DescriptionItem text="공식 사이트" details={<a href="www.python.org" target="_blank">공식 사이트</a>} />,
       <DescriptionItem text="장점" details={'구문이 간단하고 배우기가 쉽다. 다양한 프로그래밍 스타일을 제공한다. 객체지향, 기능 및 절차 프로그래밍 등을 지원한다.'} />,
       <DescriptionItem text="단점" details={'실행속도가 느리다'} />,
@@ -31,4 +31,4 @@ class Python extends Component {
   }
 }
 
-export default Python;
+export default Sanic;
