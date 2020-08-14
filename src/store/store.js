@@ -93,7 +93,6 @@ export default class UserStore {
     window.scrollTo(0, 0);
   }
 
-
   /* ImformationContents 에서 Image 찾는 함수 */
   @action findImage = (language) => {
     var image;
