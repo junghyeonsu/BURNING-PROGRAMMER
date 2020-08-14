@@ -88,7 +88,7 @@ export default class UserStore {
     [["all",], VueDotJSImg, "Vue.js"],
   ];
 
-
+  /* 버튼을 눌렀을 때 맨위로 가는 함수*/ 
   @action onClickHomeButton = () => {
     window.scrollTo(0, 0);
   }
