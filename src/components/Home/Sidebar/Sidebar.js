@@ -43,7 +43,7 @@ export const Sidebar = ({ width, height, children }) => {
             </div>
             <SidebarButton>Web</SidebarButton>
             <SidebarButton>Mobile</SidebarButton>
-            <SidebarButton>Machine Learning</SidebarButton>
+            <SidebarButton>MachineLearning</SidebarButton>
             <SidebarButton>Database</SidebarButton>
             <SidebarButton>Cloud</SidebarButton>
             <SidebarButton>Game</SidebarButton>
