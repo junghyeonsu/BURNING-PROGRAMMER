@@ -20,22 +20,44 @@ class MobileClickContent extends Component {
 
         return(
             <div className="click-content-container">
-                <div className="header">
-                    모바일
+
+            <div className="header">
+                <div className="header_title">
+                모바일
                 </div>
-                <div className="text">
-                    프론트엔드
-                </div>
-                <div className="container">
-                    {language_front_list} 
-                </div>
-                <div className="text">
-                    백엔드
-                </div>
-                <div className="container">
-                    {language_back_list}
+                <div className="information">
+                    웹사이트는 쏼라쏼라 입니다.
+                    <br /><br />
+                    등등
                 </div>
             </div>
+
+            <div className="text">
+                <div className="text_title">
+                    프론트엔드
+                </div>
+                <div className="information">
+                    프론트엔드란?
+                </div>
+            </div>
+
+            <div className="container">
+                {language_front_list} 
+            </div>
+
+            <div className="text">
+                <div className="text_title">
+                    백엔드
+                </div>
+                <div className="information">
+                    백엔드란?
+                </div>
+            </div>
+
+            <div className="container">
+                {language_back_list}
+            </div>
+        </div>
         );
     }
 }
