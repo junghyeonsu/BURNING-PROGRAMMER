@@ -21,7 +21,7 @@ class DatabaseClickContent extends Component {
         return(
             <div className="click-content-container">
                 <div className="header">
-                    웹사이트
+                    데이터베이스
                 </div>
                 <div className="text">
                     프론트엔드

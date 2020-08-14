@@ -21,7 +21,7 @@ class MobileClickContent extends Component {
         return(
             <div className="click-content-container">
                 <div className="header">
-                    웹사이트
+                    모바일
                 </div>
                 <div className="text">
                     프론트엔드

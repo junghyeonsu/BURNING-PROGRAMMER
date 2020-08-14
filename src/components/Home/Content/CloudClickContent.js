@@ -21,7 +21,7 @@ class CloudClickContent extends Component {
         return(
             <div className="click-content-container">
                 <div className="header">
-                    웹사이트
+                    클라우드 컴퓨팅
                 </div>
                 <div className="text">
                     프론트엔드
