@@ -37,7 +37,7 @@ class App extends Component {
           <Route exact path="/" component={Home}/>
           <Route exact path="/Home" component={Home}/>
           <Route exact path="/Python" component={Python}/>
-          <Route exact path="/web" component={Web}/>
+          <Route exact path="/Web" component={Web}/>
         </Switch>
       </Router>
     );
