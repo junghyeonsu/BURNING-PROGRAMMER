@@ -46,7 +46,8 @@ export default class UserStore {
   @observable presentLanguage = "all";
   @observable categoryClicked = false;
   /* 프로그래밍 언어 리스트 */
-  /* 순서 = 카테고리 배열(all = default), 이미지, 텍스트 */
+  /* 순서 = 카테고리 배열(all = default), 이미지, 텍스트, 
+                      [[라이브러리 or 언어 or 프레임워크] [부모언어]] */
   @observable languageList = [
     [["all", "web", "백"], javaImg, "Java"],
     [["all", "web", "프론트"], pythonImg, "Python"],
@@ -58,7 +59,7 @@ export default class UserStore {
     [["all", "자바"], rImg, "R"],
     [["all", "java"], raspberryPiImg, "Raspberry Pi"],
     [["all", "web", "프론트"], CSSImg, "CSS"],
-    [["all", "web", "프론트"], ReactImg, "React"],
+    [["all", "web", "프론트"], ReactImg, "React" ,["라이브러리", "Javascript"]],
     [["all", "web", "백"], PHPImg, "PHP"],
     [["all", "web", "프론트"], javaScriptImg, "Javascript"],
     [["all", "web", "프론트"], HTMLImg, "HTML"],
