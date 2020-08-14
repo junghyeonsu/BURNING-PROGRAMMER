@@ -1,6 +1,11 @@
+.Home {
+  font-weight: 800;
+  background-color: rgb(252, 77, 129);
+}
+
 .btn {
     position: relative;
-    color: white;
+    color: rgb(255, 255, 255);
     width: 90%;
     height: 40px;
     line-height: 40px;
@@ -8,7 +13,7 @@
     margin-left: 7px;
     margin-bottom: 5px;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .btn span {
