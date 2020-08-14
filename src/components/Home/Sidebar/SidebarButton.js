@@ -21,6 +21,6 @@ class SidebarButton extends Component {
             </Link>
         );
     }
-}
+} 
 
 export default SidebarButton;
