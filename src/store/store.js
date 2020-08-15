@@ -43,6 +43,7 @@ import VueDotJSImg from '../images/Vue.js.png';
 
 @autobind
 export default class UserStore {
+  /* 카테고리 클릭 관련 함수 */
   @observable presentLanguage = "all";
   @observable categoryClicked = false;
   /* 프로그래밍 언어 리스트 */
@@ -89,11 +90,6 @@ export default class UserStore {
     [["all",],                  VueDotJSImg,    "Vue.js",         ["프레임워크", "Javascript"]],
   ];
 
-  /* 버튼을 눌렀을 때 맨위로 가는 함수*/ 
-  @action onClickHomeButton = () => {
-    window.scrollTo(0, 0);
-  }
-
   /* ImformationContents 에서 Image 찾는 함수 */
   @action findImage = (language) => {
     var image;
@@ -110,4 +106,71 @@ export default class UserStore {
       this.presentLanguage = e.target.id;
       console.log("changePresentLanguage");
   }
+
+
+   /* 토글 버튼 CSS 관련 STATE */
+   @observable isToggleActive = false;
+   @observable one_degree = 45;
+   @observable one_translate_x = 5;
+   @observable one_translate_y = 5;
+   @observable two_opacity = 0;
+   @observable three_degree = -45;
+   @observable three_translate_x = 7;
+   @observable three_translate_y = -8;
+   
+   /* 토글 버튼 CSS 관련 함수 */
+   @action clickToggleButtonAnimation = () => {
+     var currentAcitve = this.isToggleActive;
+     this.isToggleActive = !currentAcitve;
+     if(this.isToggleActive){
+       this.one_degree = 0;
+       this.one_translate_x = 0;
+       this.one_translate_y = 0;
+       this.two_opacity = 100;
+       this.three_degree = 0;
+       this.three_translate_x = 0;
+       this.three_translate_y = 0;
+     } else {
+       this.one_degree = 45;
+       this.one_translate_x = 5;
+       this.one_translate_y = 5;
+       this.two_opacity = 0;
+       this.three_degree = -45;
+       this.three_translate_x = 7;
+       this.three_translate_y = -8;
+     }
+   }
+ 
+    /* 토글 버튼 " = " 모양으로 만드는 함수 */
+  @action turnOffToggleButtonAnimation = () => {
+    this.isToggleActive = true;
+    this.one_degree = 0;
+    this.one_translate_x = 0;
+    this.one_translate_y = 0;
+    this.two_opacity = 100;
+    this.three_degree = 0;
+    this.three_translate_x = 0;
+    this.three_translate_y = 0;
+  }
+  
+
+   /* 사이드바 관련 state */
+   @observable sidebarWidth = 200;
+   @observable sidebarXPosition = 0;
+ 
+   /* 사이드바 관련 함수 */
+   @action toggleSidebar = () => {
+     if (this.sidebarXPosition < 0) {
+       this.sidebarXPosition = 0;
+     } else {
+       this.sidebarXPosition = -this.sidebarWidth;
+     }
+   }
+ 
+   /* 사이드바 숨기고 화면 맨위로 이동하는 함수 */
+   @action hideSidebarAndMoveTop = () => {
+     this.sidebarXPosition = -this.sidebarWidth;
+     window.scrollTo({top: 0, left: 0, behavior:'smooth'});
+     this.turnOffToggleButtonAnimation();
+   }
 }
