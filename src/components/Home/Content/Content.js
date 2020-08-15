@@ -40,7 +40,6 @@ class Content extends Component {
 
     render(){
         return(
-            
             <div className="Content">
                 <Link onClick={this.props.onClick} to={this.props.name}>
                     <img src={this.props.image}></img>

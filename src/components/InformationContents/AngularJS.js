@@ -26,18 +26,7 @@ class AngularJS extends Component {
       /* link = a 태그 */
       <DescriptionItem link={<a href="https://angularjs.org/" target="_blank">Angular</a>} />,
       
-      /* 언어 기준 */
-      /* type = "라이브러리 or 프레임워크" */
-      /* whoami = "그 언어 이름" */
-
-      /* 라이브러리 기준 */    
-      /* type =  언어 */
-      /* whoami = "그 언어 이름"  */
-
-      /* 프레임워크 기준 */
-      /* type = 언어 */
-      /* whoami = "그 언어 이름" */
-      <DescriptionItem type={"라이브러리"} whoami={'Angular'} />, 
+      <DescriptionItem type={"라이브러리"} whoami={'Javascript'} />, 
     ]
     
     return (
