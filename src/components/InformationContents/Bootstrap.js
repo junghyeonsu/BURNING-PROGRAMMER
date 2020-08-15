@@ -5,27 +5,44 @@ import DescriptionList from '../Information/InformationContainer'
 import DescriptionItem from '../Information/InformationItem'
 
 @inject('store')
-@observer 
+@observer
 class Bootstrap extends Component {
-  
+
   render() {
     const { store } = this.props;
 
     const Image = store.findImage("Bootstrap");
 
     const list = [
-      <DescriptionItem image={<img src={Image} alt="My Image"></img>} text={"Bootstrap"} />,
-      <DescriptionItem text="공식 사이트" details={<a href="www.python.org" target="_blank">공식 사이트</a>} />,
-      <DescriptionItem text="장점" details={'구문이 간단하고 배우기가 쉽다. 다양한 프로그래밍 스타일을 제공한다. 객체지향, 기능 및 절차 프로그래밍 등을 지원한다.'} />,
-      <DescriptionItem text="단점" details={'실행속도가 느리다'} />,
-      <DescriptionItem text="파이썬 활용 분야" details={'다양한 AI 라이브러리를 제공한다. 머신 러닝에 사용하는 Pybrain, 복잡한 과학적 계산에 사용되는 Numpy, 인공신경망을 제공하는 Tensorflow등이 그 예이다. 다양한 AI 알고리즘을 쉽게 구현할 수 있다. 즉, 개발 기간이 짧고 복잡한 AI를 개발할 때 적합하다.'} />,
-      <DescriptionItem text="추천 IDE" details={'파이참'} />,
-      <DescriptionItem text="라이브러리" details={'Pandas'} />,
+      /* image = 이미지
+        imageText = 그 이미지 이름 */
+      <DescriptionItem image={ <img src={ Image } alt="My Image"></img> } text={ "Bootstrap" } />,
+
+      /* informationTitle = 설명 위에 타이틀
+         그리고 chileren으로 설명을 넘겨주어야함  */
+      <DescriptionItem informationTitle="Bootstrap 활용 분야">부트스트랩(Bootstrap)은 웹사이트를 쉽게 만들 수 있게 도와주는 HTML, CSS, JS 프레임워크이다. <br />하나의 CSS 로 휴대폰, 태블릿, 데스크탑까지 다양한 기기에서 작동한다. <br />다양한 기능을 제공하여 사용자가 쉽게 웹사이트를 제작, 유지, 보수할 수 있도록 도와준다.</DescriptionItem>,
+
+      /* link = a 태그 */
+      <DescriptionItem link={ <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> } />,
+
+      /* 언어 기준 */
+      /* type = "라이브러리 or 프레임워크" */
+      /* whoami = "그 언어 이름" */
+
+      /* 라이브러리 기준 */
+      /* type =  언어 */
+      /* whoami = "그 언어 이름"  */
+
+      /* 프레임워크 기준 */
+      /* type = 언어 */
+      /* whoami = "그 언어 이름" */
+      // Bootstrap은 웹 프론트엔드 프레임워크임
+      <DescriptionItem type={ "프레임워크" } whoami={ 'CSS' } />,
     ]
-    
+
     return (
       <div>
-        <DescriptionList list ={list} />
+        <DescriptionList list={ list } />
       </div>
     );
   }
