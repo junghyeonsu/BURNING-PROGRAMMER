@@ -14,13 +14,20 @@ class Elixir extends Component {
     const Image = store.findImage("Elixir");
 
     const list = [
-      <DescriptionItem image={<img src={Image} alt="My Image"></img>} text={"Elixir"} />,
-      <DescriptionItem text="공식 사이트" details={<a href="www.python.org" target="_blank">공식 사이트</a>} />,
-      <DescriptionItem text="장점" details={'구문이 간단하고 배우기가 쉽다. 다양한 프로그래밍 스타일을 제공한다. 객체지향, 기능 및 절차 프로그래밍 등을 지원한다.'} />,
-      <DescriptionItem text="단점" details={'실행속도가 느리다'} />,
-      <DescriptionItem text="파이썬 활용 분야" details={'다양한 AI 라이브러리를 제공한다. 머신 러닝에 사용하는 Pybrain, 복잡한 과학적 계산에 사용되는 Numpy, 인공신경망을 제공하는 Tensorflow등이 그 예이다. 다양한 AI 알고리즘을 쉽게 구현할 수 있다. 즉, 개발 기간이 짧고 복잡한 AI를 개발할 때 적합하다.'} />,
-      <DescriptionItem text="추천 IDE" details={'파이참'} />,
-      <DescriptionItem text="라이브러리" details={'Pandas'} />,
+      /* image = 이미지
+        imageText = 그 이미지 이름 */
+        <DescriptionItem image={<img src={Image} alt="My Image"></img>} text={"Elixir"} />,
+
+        /* informationTitle = 설명 위에 타이틀
+           그리고 chileren으로 설명을 넘겨주어야함  */
+        <DescriptionItem informationTitle="Elixir 란?">엘릭서(Elixir)는 얼랭(Erlang) 가상 머신(BEAM) 위에서 동작하는 함수형, 동시성 프로그래밍 언어이다.
+        </DescriptionItem>,
+  
+        /* link = a 태그 */
+        <DescriptionItem link={ <a href="https://web.archive.org/web/20120418080914/http://elixir-lang.org/" target="_blank">Elixir</a> } />,
+        <DescriptionItem informationTitle="Elixir 활용 분야">엘릭서는 얼랭이 보유하고 있는 분산 처리, 장애 내구성, 실시간, 무정지 애플리케이션 등의 특징을 공유한다.<br /> 그에 더해서 프로토콜을 이용해 다형성을 지원하고, Quote과 Unquote 그리고 Macro를 통한 DSL 구현 등의 메타 프로그래밍이 가능하다.
+        </DescriptionItem>,
+        <DescriptionItem myNameIs={ "Elixir" } />,
     ]
     
     return (

@@ -14,13 +14,20 @@ class Unity extends Component {
     const Image = store.findImage("Unity");
 
     const list = [
-      <DescriptionItem image={<img src={Image} alt="My Image"></img>} text={"Unity"} />,
-      <DescriptionItem text="공식 사이트" details={<a href="www.python.org" target="_blank">공식 사이트</a>} />,
-      <DescriptionItem text="장점" details={'구문이 간단하고 배우기가 쉽다. 다양한 프로그래밍 스타일을 제공한다. 객체지향, 기능 및 절차 프로그래밍 등을 지원한다.'} />,
-      <DescriptionItem text="단점" details={'실행속도가 느리다'} />,
-      <DescriptionItem text="파이썬 활용 분야" details={'다양한 AI 라이브러리를 제공한다. 머신 러닝에 사용하는 Pybrain, 복잡한 과학적 계산에 사용되는 Numpy, 인공신경망을 제공하는 Tensorflow등이 그 예이다. 다양한 AI 알고리즘을 쉽게 구현할 수 있다. 즉, 개발 기간이 짧고 복잡한 AI를 개발할 때 적합하다.'} />,
-      <DescriptionItem text="추천 IDE" details={'파이참'} />,
-      <DescriptionItem text="라이브러리" details={'Pandas'} />,
+      /* image = 이미지
+        imageText = 그 이미지 이름 */
+        <DescriptionItem image={<img src={Image} alt="My Image"></img>} text={"Unity"} />,
+
+        /* informationTitle = 설명 위에 타이틀
+           그리고 chileren으로 설명을 넘겨주어야함  */
+        <DescriptionItem informationTitle="Unity 란?">유니티(Unity)는 3D 및 2D 비디오 게임의 개발 환경을 제공하는 게임 엔진이자, <br />3D 애니메이션과 건축 시각화, 가상현실(VR) 등 인터랙티브 콘텐츠 제작을 위한 통합 저작 도구이다.
+        </DescriptionItem>,
+  
+        /* link = a 태그 */
+        <DescriptionItem link={ <a href="https://unity.com/" target="_blank">Unity</a> } />,
+        <DescriptionItem informationTitle="Unity 활용 분야">게임 개발에 사용하는 스크립트 언어는 C#와 자바스크립트(UnityScript라는 이름으로)를 지원한다. <br />또한 도형으로 프로그래밍(유니티 볼트 (프로그래밍 언어))이 가능해 코딩이 능숙하지 않은 일반 개발자도 쉽게 코딩이 가능하다.<br /> Boo는 유니티5부터 지원이 중단되었다. <br />스크립트 작성은 유니티와 함께 설치되는 비주얼 스튜디오(맥OS의 경우, 모노디벨로프)를 이용하며, 다른 편집기와 연동하는 것도 가능하다.<br />
+        </DescriptionItem>,
+        <DescriptionItem myNameIs={ "Unity" } />,
     ]
     
     return (

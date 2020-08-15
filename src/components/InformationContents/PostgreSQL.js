@@ -14,13 +14,20 @@ class PostgreSQL extends Component {
     const Image = store.findImage("Postgre SQL");
 
     const list = [
-      <DescriptionItem image={<img src={Image} alt="My Image"></img>} text={"PostgreSQL"} />,
-      <DescriptionItem text="공식 사이트" details={<a href="www.python.org" target="_blank">공식 사이트</a>} />,
-      <DescriptionItem text="장점" details={'구문이 간단하고 배우기가 쉽다. 다양한 프로그래밍 스타일을 제공한다. 객체지향, 기능 및 절차 프로그래밍 등을 지원한다.'} />,
-      <DescriptionItem text="단점" details={'실행속도가 느리다'} />,
-      <DescriptionItem text="파이썬 활용 분야" details={'다양한 AI 라이브러리를 제공한다. 머신 러닝에 사용하는 Pybrain, 복잡한 과학적 계산에 사용되는 Numpy, 인공신경망을 제공하는 Tensorflow등이 그 예이다. 다양한 AI 알고리즘을 쉽게 구현할 수 있다. 즉, 개발 기간이 짧고 복잡한 AI를 개발할 때 적합하다.'} />,
-      <DescriptionItem text="추천 IDE" details={'파이참'} />,
-      <DescriptionItem text="라이브러리" details={'Pandas'} />,
+      /* image = 이미지
+        imageText = 그 이미지 이름 */
+        <DescriptionItem image={<img src={Image} alt="My Image"></img>} text={"PostgreSQL"} />,
+
+        /* informationTitle = 설명 위에 타이틀
+           그리고 chileren으로 설명을 넘겨주어야함  */
+        <DescriptionItem informationTitle="Postgre SQL 란?">PostgreSQL은 확장 가능성 및 표준 준수를 강조하는 객체-관계형 데이터베이스 관리 시스템(ORDBMS)의 하나이다.
+        </DescriptionItem>,
+  
+        /* link = a 태그 */
+        <DescriptionItem link={ <a href="https://www.postgresql.org/" target="_blank">Postgre SQL</a> } />,
+        <DescriptionItem informationTitle="Postgre SQL 활용 분야">BSD 허가권으로 배포되며 오픈소스 개발자 및 관련 회사들이 개발에 참여하고 있다. <br />데이터베이스 서버로서 주요 기능은 데이터를 안전하게 저장하고 다른 응용 소프트웨어로부터의 요청에 응답할 때 데이터를 반환하는 것이이다. <br />소규모의 단일 머신 애플리케이션에서부터 수많은 동시 접속 사용자가 있는 대형의 인터넷 애플리케이션(또는 데이터 웨어하우스용)에 이르기까지 여러 부하를 관리할 수 있으며 macOS 서버의 경우 PostgreSQL은 기본 데이터베이스이다. <br />마이크로소프트 윈도우, 리눅스(대부분의 배포판에서 제공됨)용으로도 이용 가능하다.
+        </DescriptionItem>,
+        <DescriptionItem myNameIs={ "Postgre SQL" } />,
     ]
     
     return (
