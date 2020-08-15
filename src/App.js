@@ -56,12 +56,8 @@ import Mobile from './components/Home/Content/MobileClickContent';
 import Robot from './components/Home/Content/RobotClickContent';
 import MachineLearning from './components/Home/Content/MachineLearningClickContent';
 
-//필요 라이브러리
-import { Transition, TransitionGroup } from "react-transition-group";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-
-// https://www.npmjs.com/package/react-animation-components 참고할거임.
 
 @inject('store')
 @observer

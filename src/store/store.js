@@ -43,56 +43,52 @@ import VueDotJSImg from '../images/Vue.js.png';
 
 @autobind
 export default class UserStore {
+  /* 카테고리 클릭 관련 함수 */
   @observable presentLanguage = "all";
   @observable categoryClicked = false;
   /* 프로그래밍 언어 리스트 */
   /* 순서 = 카테고리 배열(all = default), 이미지, 텍스트, 
                       [[라이브러리 or 언어 or 프레임워크] [부모언어]] */
   @observable languageList = [
-    [["all", "web", "백"], javaImg, "Java"],
-    [["all", "web", "프론트"], pythonImg, "Python"],
-    [["all", "자바"], cPlusPlusImg, "C++"],
-    [["all", "c++"], arduinoImg, "Arduino"],
-    [["all", "web"], juliaImg, "Julia"],
-    [["all", "자바"], prologImg, "Prolog"],
-    [["all", "자바"], lispImg, "Lisp"],
-    [["all", "자바"], rImg, "R"],
-    [["all", "java"], raspberryPiImg, "Raspberry Pi"],
-    [["all", "web", "프론트"], CSSImg, "CSS"],
-    [["all", "web", "프론트"], ReactImg, "React" ,["라이브러리", "Javascript"]],
-    [["all", "web", "백"], PHPImg, "PHP"],
-    [["all", "web", "프론트"], javaScriptImg, "Javascript"],
-    [["all", "web", "프론트"], HTMLImg, "HTML"],
-    [["all",], dotNetImg, ".Net"],
-    [["all",], AngularJSImg, "Angular"],
-    [["all",], BootstrapImg, "Bootstrap"],
-    [["all",], ClojureImg, "Clojure"],
-    [["all",], djangoImg, "Django"],
-    [["all",], ElixirImg, "Elixir"],
-    [["all",], FalconImg, "Falcon"],
-    [["all",], FlaskImg, "Flask"],
-    [["all",], HaskellImg, "Haskell"],
-    [["all",], kotlinImg, "Kotlin"],
-    [["all",], LaravelImg, "Laravel"],
-    [["all",], MySQLImg, "MySQL"],
-    [["all",], NodeDotJSImg, "Node.js"],
-    [["all",], react_nativeImg, "React Native"],
-    [["all",], PostgreSQLImg, "Postgre SQL"],
-    [["all",], RubyImg, "Ruby"],
-    [["all",], RubyOnRailsImg, "Ruby on Rails"],
-    [["all",], SanicImg, "Sanic"],
-    [["all",], ScalaImg, "Scala"],
-    [["all",], SwiftImg, "Swift"],
-    [["all",], TornadoImg, "Tornado"],
-    [["all",], UnityImg, "Unity"],
-    [["all",], ViboraImg, "Vibora"],
-    [["all",], VueDotJSImg, "Vue.js"],
+    [["all", "web", "백"],      javaImg,        "Java",           []],
+    [["all", "web", "프론트"],  pythonImg,      "Python",         []],
+    [["all", "자바"],           cPlusPlusImg,   "C++",            []],
+    [["all", "c++"],            arduinoImg,     "Arduino",        []],
+    [["all", "web"],            juliaImg,       "Julia",          []],
+    [["all", "자바"],           prologImg,      "Prolog",         []],
+    [["all", "자바"],           lispImg,        "Lisp",           []],
+    [["all", "자바"],           rImg,           "R",              []],
+    [["all", "java"],           raspberryPiImg, "Raspberry Pi",   []],
+    [["all", "web", "프론트"],  CSSImg,         "CSS",            []],
+    [["all", "web", "프론트"],  ReactImg,       "React" ,         ["라이브러리", "Javascript"]],
+    [["all", "web", "백"],      PHPImg,         "PHP",            []],
+    [["all", "web", "프론트"],  javaScriptImg,  "Javascript",     ["언어", "Javascript"]],
+    [["all", "web", "프론트"],  HTMLImg,        "HTML",           []],
+    [["all",],                  dotNetImg,      ".Net",           []],
+    [["all",],                  AngularJSImg,   "Angular",        ["프레임워크", "Javascript"]],
+    [["all",],                  ClojureImg,     "Clojure",        []],
+    [["all",],                  BootstrapImg,   "Bootstrap",      ["프레임워크"]],
+    [["all",],                  djangoImg,      "Django",         []],
+    [["all",],                  ElixirImg,      "Elixir",         []],
+    [["all",],                  FalconImg,      "Falcon",         []],
+    [["all",],                  FlaskImg,       "Flask",          []],
+    [["all",],                  HaskellImg,     "Haskell",        []],
+    [["all",],                  kotlinImg,      "Kotlin",         []],
+    [["all",],                  LaravelImg,     "Laravel",        []],
+    [["all",],                  MySQLImg,       "MySQL",          []],
+    [["all",],                  NodeDotJSImg,   "Node.js",        ["프레임워크", "Javascript"]],
+    [["all",],                  react_nativeImg,"React Native",   ["프레임워크", "Javascript"]],
+    [["all",],                  PostgreSQLImg,  "Postgre SQL",    []],
+    [["all",],                  RubyImg,        "Ruby",           []],
+    [["all",],                  RubyOnRailsImg, "Ruby on Rails",  []],
+    [["all",],                  SanicImg,       "Sanic",          []],
+    [["all",],                  ScalaImg,       "Scala",          []],
+    [["all",],                  SwiftImg,       "Swift",          []],
+    [["all",],                  TornadoImg,     "Tornado",        []],
+    [["all",],                  UnityImg,       "Unity",          []],
+    [["all",],                  ViboraImg,      "Vibora",         []],
+    [["all",],                  VueDotJSImg,    "Vue.js",         ["프레임워크", "Javascript"]],
   ];
-
-  /* 버튼을 눌렀을 때 맨위로 가는 함수*/ 
-  @action onClickHomeButton = () => {
-    window.scrollTo(0, 0);
-  }
 
   /* ImformationContents 에서 Image 찾는 함수 */
   @action findImage = (language) => {
@@ -100,7 +96,6 @@ export default class UserStore {
     this.languageList.map(i => {
       if(i[2] === language){
         image = i[1];
-        console.log(image);
       }
     });
     return image;
@@ -111,4 +106,71 @@ export default class UserStore {
       this.presentLanguage = e.target.id;
       console.log("changePresentLanguage");
   }
+
+
+   /* 토글 버튼 CSS 관련 STATE */
+   @observable isToggleActive = false;
+   @observable one_degree = 45;
+   @observable one_translate_x = 5;
+   @observable one_translate_y = 5;
+   @observable two_opacity = 0;
+   @observable three_degree = -45;
+   @observable three_translate_x = 7;
+   @observable three_translate_y = -8;
+   
+   /* 토글 버튼 CSS 관련 함수 */
+   @action clickToggleButtonAnimation = () => {
+     var currentAcitve = this.isToggleActive;
+     this.isToggleActive = !currentAcitve;
+     if(this.isToggleActive){
+       this.one_degree = 0;
+       this.one_translate_x = 0;
+       this.one_translate_y = 0;
+       this.two_opacity = 100;
+       this.three_degree = 0;
+       this.three_translate_x = 0;
+       this.three_translate_y = 0;
+     } else {
+       this.one_degree = 45;
+       this.one_translate_x = 5;
+       this.one_translate_y = 5;
+       this.two_opacity = 0;
+       this.three_degree = -45;
+       this.three_translate_x = 7;
+       this.three_translate_y = -8;
+     }
+   }
+ 
+    /* 토글 버튼 " = " 모양으로 만드는 함수 */
+  @action turnOffToggleButtonAnimation = () => {
+    this.isToggleActive = true;
+    this.one_degree = 0;
+    this.one_translate_x = 0;
+    this.one_translate_y = 0;
+    this.two_opacity = 100;
+    this.three_degree = 0;
+    this.three_translate_x = 0;
+    this.three_translate_y = 0;
+  }
+  
+
+   /* 사이드바 관련 state */
+   @observable sidebarWidth = 200;
+   @observable sidebarXPosition = 0;
+ 
+   /* 사이드바 관련 함수 */
+   @action toggleSidebar = () => {
+     if (this.sidebarXPosition < 0) {
+       this.sidebarXPosition = 0;
+     } else {
+       this.sidebarXPosition = -this.sidebarWidth;
+     }
+   }
+ 
+   /* 사이드바 숨기고 화면 맨위로 이동하는 함수 */
+   @action hideSidebarAndMoveTop = () => {
+     this.sidebarXPosition = -this.sidebarWidth;
+     window.scrollTo({top: 0, left: 0, behavior:'smooth'});
+     this.turnOffToggleButtonAnimation();
+   }
 }
