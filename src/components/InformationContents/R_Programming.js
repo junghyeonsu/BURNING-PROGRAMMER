@@ -14,13 +14,20 @@ class R_Programming extends Component {
     const Image = store.findImage("R");
 
     const list = [
-      <DescriptionItem image={<img src={Image} alt="My Image"></img>} text={"R_Programming"} />,
-      <DescriptionItem text="공식 사이트" details={<a href="www.python.org" target="_blank">공식 사이트</a>} />,
-      <DescriptionItem text="장점" details={'구문이 간단하고 배우기가 쉽다. 다양한 프로그래밍 스타일을 제공한다. 객체지향, 기능 및 절차 프로그래밍 등을 지원한다.'} />,
-      <DescriptionItem text="단점" details={'실행속도가 느리다'} />,
-      <DescriptionItem text="파이썬 활용 분야" details={'다양한 AI 라이브러리를 제공한다. 머신 러닝에 사용하는 Pybrain, 복잡한 과학적 계산에 사용되는 Numpy, 인공신경망을 제공하는 Tensorflow등이 그 예이다. 다양한 AI 알고리즘을 쉽게 구현할 수 있다. 즉, 개발 기간이 짧고 복잡한 AI를 개발할 때 적합하다.'} />,
-      <DescriptionItem text="추천 IDE" details={'파이참'} />,
-      <DescriptionItem text="라이브러리" details={'Pandas'} />,
+      /* image = 이미지
+        imageText = 그 이미지 이름 */
+        <DescriptionItem image={<img src={Image} alt="My Image"></img>} text={"R_Programming"} />,
+
+        /* informationTitle = 설명 위에 타이틀
+           그리고 chileren으로 설명을 넘겨주어야함  */
+        <DescriptionItem informationTitle="R_Programming 란?">R은 통계 계산과 그래픽을 위한 프로그래밍 언어이자 소프트웨어 환경이자 프리웨어이다.<br /> R은 데이터 분석 및 조작 분야에 많이 사용된다. 통계 분야에 많이 사용되며 R을 이용해 수학 기호, 플롯, 공식 등을 구할 수 있다.
+        </DescriptionItem>,
+  
+        /* link = a 태그 */
+        <DescriptionItem link={ <a href="https://www.r-project.org/" target="_blank">R_Programming</a> } />,
+        <DescriptionItem informationTitle="R_Programming 활용 분야">G모델, Class, TM, RODBC 등 AI 개발에 활용할 수 있는 다양한 패키지를 제공하기 때문에 머신러닝에서 사용하기도 한다.
+        </DescriptionItem>,
+        <DescriptionItem myNameIs={ "R" } />,
     ]
     
     return (

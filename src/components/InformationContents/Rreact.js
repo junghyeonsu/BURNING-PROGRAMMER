@@ -14,13 +14,20 @@ class Rreact extends Component {
     const Image = store.findImage("React");
 
     const list = [
-      <DescriptionItem image={<img src={Image} alt="My Image"></img>} text={"React"} />,
-      <DescriptionItem text="공식 사이트" details={<a href="www.python.org" target="_blank">공식 사이트</a>} />,
-      <DescriptionItem text="장점" details={'구문이 간단하고 배우기가 쉽다. 다양한 프로그래밍 스타일을 제공한다. 객체지향, 기능 및 절차 프로그래밍 등을 지원한다.'} />,
-      <DescriptionItem text="단점" details={'실행속도가 느리다'} />,
-      <DescriptionItem text="파이썬 활용 분야" details={'다양한 AI 라이브러리를 제공한다. 머신 러닝에 사용하는 Pybrain, 복잡한 과학적 계산에 사용되는 Numpy, 인공신경망을 제공하는 Tensorflow등이 그 예이다. 다양한 AI 알고리즘을 쉽게 구현할 수 있다. 즉, 개발 기간이 짧고 복잡한 AI를 개발할 때 적합하다.'} />,
-      <DescriptionItem text="추천 IDE" details={'파이참'} />,
-      <DescriptionItem myNameIs={"React"} />,
+      /* image = 이미지
+        imageText = 그 이미지 이름 */
+        <DescriptionItem image={<img src={Image} alt="My Image"></img>} text={"React"} />,
+
+        /* informationTitle = 설명 위에 타이틀
+           그리고 chileren으로 설명을 넘겨주어야함  */
+        <DescriptionItem informationTitle="React 란?">컴퓨팅에서 리액트(React, React.js 또는 ReactJS)는 자바스크립트 라이브러리의 하나로서 사용자 인터페이스를 만들기 위해 사용된다. <br />페이스북과 개별 개발자 및 기업들 공동체에 의해 유지보수된다.
+        </DescriptionItem>,
+  
+        /* link = a 태그 */
+        <DescriptionItem link={ <a href="https://ko.reactjs.org/" target="_blank">React</a> } />,
+        <DescriptionItem informationTitle="React 활용 분야">리액트는 싱글 페이지나 모바일 애플리케이션의 개발 시 토대로 사용될 수 있다. <br />복잡한 리액트 애플리케이션들은 상태 관리, 라우팅, API와의 통신을 위한 추가 라이브러리의 사용이 일반적으로 요구된다.
+        </DescriptionItem>,
+        <DescriptionItem myNameIs={ "React" } />,
     ]
     
     return (
