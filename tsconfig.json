@@ -21,6 +21,6 @@
     "jsx": "react"
   },
   "include": [
-    "src"
+    "src", "src/components/InformationContents/.js", "src/components/InformationContents/.Net.js"
   ]
 }
