@@ -10,11 +10,11 @@ onClick = 부모가 click으로 넘겨준 함수를 실행
 */
 @inject('store')
 @observer
-class SidebarButton extends Component {
+class SidebarButton extends Component {    
     render(){
         const { store } = this.props;
         return(
-            <Link onClick={store.onClickHomeButton}style={{textDecoration: 'none'}} to={this.props.children}>
+            <Link onClick={store.hideSidebarAndMoveTop} style={{textDecoration: 'none'}} to={this.props.children}>
                 <div id={this.props.children} onClick={store.changePresentLanguage} className="btn btn-three">
                     <span>{this.props.children}</span>
                 </div>
