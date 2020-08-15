@@ -49,7 +49,7 @@ import Vuejs from './components/InformationContents/Vue';
 //분야별
 import Web from './components/Home/Content/WebClickContent';
 import Home from './components/Home/Content/AllContent';
-import Cloud from './components/Home/Content/CloudClickContent';
+import VersionClickContent from './components/Home/Content/VersionClickContent';
 import Database from './components/Home/Content/DatabaseClickContent';
 import Game from './components/Home/Content/GameClickContent';
 import Mobile from './components/Home/Content/MobileClickContent';
@@ -79,7 +79,7 @@ class App extends Component {
           <Route exact path="/Mobile" component={Mobile}/>
           <Route exact path="/MachineLearning" component={MachineLearning}/>
           <Route exact path="/Database" component={Database}/>
-          <Route exact path="/Cloud" component={Cloud}/>
+          <Route exact path="/VersionControl" component={VersionClickContent}/>
           <Route exact path="/Game" component={Game}/>
           <Route exact path="/Robot" component={Robot}/>
 

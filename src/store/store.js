@@ -40,6 +40,12 @@ import TornadoImg from '../images/Tornado.png';
 import UnityImg from '../images/Unity.png';
 import ViboraImg from '../images/Vibora.png';
 import VueDotJSImg from '../images/Vue.js.png';
+import GitImg from '../images/git.png';
+import GithunImg from '../images/github.png';
+import VisualSourceSafeImg from '../images/VisualSourceSafe.png'
+import perforceImg from '../images/perforce.png';
+import bitbucketImg from '../images/bitbucket.png';
+
 
 @autobind
 export default class UserStore {
@@ -49,46 +55,52 @@ export default class UserStore {
   /* 프로그래밍 언어 리스트 */
   /* 순서 = 카테고리 배열(all = default), 이미지, 텍스트, 
                       [[라이브러리 or 언어 or 프레임워크] [부모언어]] */
-  @observable languageList = [
-    [["all", "web", "백"],      javaImg,        "Java",           []],
-    [["all", "web", "프론트"],  pythonImg,      "Python",         []],
-    [["all", "자바"],           cPlusPlusImg,   "C++",            []],
-    [["all", "c++"],            arduinoImg,     "Arduino",        []],
-    [["all", "web"],            juliaImg,       "Julia",          []],
-    [["all", "자바"],           prologImg,      "Prolog",         []],
-    [["all", "자바"],           lispImg,        "Lisp",           []],
-    [["all", "자바"],           rImg,           "R",              []],
-    [["all", "java"],           raspberryPiImg, "Raspberry Pi",   []],
-    [["all", "web", "프론트"],  CSSImg,         "CSS",            []],
-    [["all", "web", "프론트"],  ReactImg,       "React" ,         ["라이브러리", "Javascript"]],
-    [["all", "web", "백"],      PHPImg,         "PHP",            []],
-    [["all", "web", "프론트"],  javaScriptImg,  "Javascript",     ["언어", "Javascript"]],
-    [["all", "web", "프론트"],  HTMLImg,        "HTML",           []],
-    [["all",],                  dotNetImg,      ".Net",           []],
-    [["all",],                  AngularJSImg,   "Angular",        ["프레임워크", "Javascript"]],
-    [["all",],                  ClojureImg,     "Clojure",        []],
-    [["all",],                  BootstrapImg,   "Bootstrap",      ["프레임워크"]],
-    [["all",],                  djangoImg,      "Django",         []],
-    [["all",],                  ElixirImg,      "Elixir",         []],
-    [["all",],                  FalconImg,      "Falcon",         []],
-    [["all",],                  FlaskImg,       "Flask",          []],
-    [["all",],                  HaskellImg,     "Haskell",        []],
-    [["all",],                  kotlinImg,      "Kotlin",         []],
-    [["all",],                  LaravelImg,     "Laravel",        []],
-    [["all",],                  MySQLImg,       "MySQL",          []],
-    [["all",],                  NodeDotJSImg,   "Node.js",        ["프레임워크", "Javascript"]],
-    [["all",],                  react_nativeImg,"React Native",   ["프레임워크", "Javascript"]],
-    [["all",],                  PostgreSQLImg,  "Postgre SQL",    []],
-    [["all",],                  RubyImg,        "Ruby",           []],
-    [["all",],                  RubyOnRailsImg, "Ruby on Rails",  []],
-    [["all",],                  SanicImg,       "Sanic",          []],
-    [["all",],                  ScalaImg,       "Scala",          []],
-    [["all",],                  SwiftImg,       "Swift",          []],
-    [["all",],                  TornadoImg,     "Tornado",        []],
-    [["all",],                  UnityImg,       "Unity",          []],
-    [["all",],                  ViboraImg,      "Vibora",         []],
-    [["all",],                  VueDotJSImg,    "Vue.js",         ["프레임워크", "Javascript"]],
-  ];
+
+@observable languageList = [
+  [["all", "web", "백", "게임언어","machine","백","native"],      javaImg,        "Java",           []],
+  [["all", "web", "프론트","게임언어","machine","백","robot"],    pythonImg,      "Python",         []],
+  [["all", "자바","게임언어","robot"],                            cPlusPlusImg,   "C++",            []],
+  [["all", "c++"],                                               arduinoImg,     "Arduino",        []],
+  [["all", "web","machine"],                                     juliaImg,       "Julia",          []],
+  [["all", "자바"],                                              prologImg,      "Prolog",         []],
+  [["all", "자바"],                                              lispImg,        "Lisp",           []],
+  [["all", "자바","machine"],                                    rImg,           "R",              []],
+  [["all", "java"],                                              raspberryPiImg, "Raspberry Pi",   []],
+  [["all", "web", "프론트","hybrid"],                            CSSImg,         "CSS",            []],
+  [["all", "web", "프론트"],                                     ReactImg,       "React" ,         ["라이브러리", "Javascript"]],
+  [["all", "web", "백"],                                         PHPImg,         "PHP",            []],
+  [["all", "web", "프론트","machine","hybrid"],                  javaScriptImg,  "Javascript",     ["언어", "Javascript"]],
+  [["all", "web", "프론트","hybrid"],                            HTMLImg,        "HTML",           []],
+  [["all",],                                                    dotNetImg,      ".Net",           []],
+  [["all", "프론트"],                                            AngularJSImg,   "Angular",        ["프레임워크", "Javascript"]],
+  [["all",],                                                    ClojureImg,     "Clojure",        []],
+  [["all", "프론트"],                                            BootstrapImg,   "Bootstrap",      ["프레임워크"]],
+  [["all","백"],                                                djangoImg,      "Django",         []],
+  [["all",],                                                    ElixirImg,      "Elixir",         []],
+  [["all",],                                                    FalconImg,      "Falcon",         []],
+  [["all","백"],                                                FlaskImg,       "Flask",          []],
+  [["all",],                                                    HaskellImg,     "Haskell",        []],
+  [["all","native"],                                            kotlinImg,      "Kotlin",         []],
+  [["all",],                                                    LaravelImg,     "Laravel",        []],
+  [["all","DB"],                                                MySQLImg,       "MySQL",          []],
+  [["all","백"],                                                NodeDotJSImg,   "Node.js",        ["프레임워크", "Javascript"]],
+  [["all","cross"],                                             react_nativeImg,"React Native",   ["프레임워크", "Javascript"]],
+  [["all","DB"],                                                PostgreSQLImg,  "Postgre SQL",    []],
+  [["all",],                                                    RubyImg,        "Ruby",           []],
+  [["all",],                                                    RubyOnRailsImg, "Ruby on Rails",  []],
+  [["all",],                                                    SanicImg,       "Sanic",          []],
+  [["all","machine"],                                           ScalaImg,       "Scala",          []],
+  [["all","native"],                                            SwiftImg,       "Swift",          []],
+  [["all",],                                                    TornadoImg,     "Tornado",        []],
+  [["all","게임엔진"],                                           UnityImg,       "Unity",          []],
+  [["all",],                                                    ViboraImg,      "Vibora",         []],
+  [["all", "프론트"],                                            VueDotJSImg,    "Vue.js",         ["프레임워크", "Javascript"]],
+  [["all", "version"],                                          GitImg,          "Git",         []],
+  [["all", "version"],                                          GithunImg,       "Github",         []],
+  [["all", "version"],                                          VisualSourceSafeImg,    "VisualSourceSafe",         []],
+  [["all", "version"],                                          perforceImg,     "perforce",         []],
+  [["all", "version"],                                          bitbucketImg,    "bitbucket",         []],
+ ];  
 
   /* ImformationContents 에서 Image 찾는 함수 */
   @action findImage = (language) => {

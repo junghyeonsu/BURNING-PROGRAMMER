@@ -41,7 +41,7 @@ class Sidebar extends Component {
               <SidebarButton>Mobile</SidebarButton>
               <SidebarButton>MachineLearning</SidebarButton>
               <SidebarButton>Database</SidebarButton>
-              <SidebarButton>Cloud</SidebarButton>
+              <SidebarButton>VersionControl</SidebarButton>
               <SidebarButton>Game</SidebarButton>
               <SidebarButton>Robot</SidebarButton>
           </div>

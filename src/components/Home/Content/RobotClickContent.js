@@ -8,13 +8,8 @@ import '../../../styles/ContentClickComponent.css'
 class RobotClickContent extends Component {
     render(){
         const { store } = this.props;
-        const language_front_list = store.languageList.map(i =>(
-            i[0].some(v => v === "프론트") ? <Content image={i[1]} name={i[2]}></Content> : ""
-          )
-        );
-
-        const language_back_list = store.languageList.map(i =>(
-            i[0].some(v => v === "백") ? <Content image={i[1]} name={i[2]}></Content> : ""
+        const language_robot_list = store.languageList.map(i =>(
+            i[0].some(v => v === "robot") ? <Content image={i[1]} name={i[2]}></Content> : ""
           )
         );
 
@@ -26,36 +21,23 @@ class RobotClickContent extends Component {
                 로봇
                 </div>
                 <div className="information">
-                    웹사이트는 쏼라쏼라 입니다.
-                    <br /><br />
-                    등등
+                    대표적으로 AWS RoboMaker를 사용해 로봇을 개발합니다.<br /><br />
+                    이 서비스는 ROS기반의 로보틱스 어플리케이션 개발, 시뮬레이션, 테스트, 로봇 Fleet관리, OTA(over-the-air) 
+                    배포까지 클라우드 환경에서 가능하게 해줍니다.
                 </div>
             </div>
 
             <div className="text">
                 <div className="text_title">
-                    프론트엔드
+                    사용 언어
                 </div>
                 <div className="information">
-                    프론트엔드란?
+                    현재 ROS는 C++ 및 Python을 지원합니다.
                 </div>
             </div>
 
             <div className="container">
-                {language_front_list} 
-            </div>
-
-            <div className="text">
-                <div className="text_title">
-                    백엔드
-                </div>
-                <div className="information">
-                    백엔드란?
-                </div>
-            </div>
-
-            <div className="container">
-                {language_back_list}
+                {language_robot_list} 
             </div>
         </div>
         );

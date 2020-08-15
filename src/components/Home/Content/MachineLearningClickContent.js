@@ -8,13 +8,8 @@ import '../../../styles/ContentClickComponent.css'
 class MachineLearingClickContent extends Component {
     render(){
         const { store } = this.props;
-        const language_front_list = store.languageList.map(i =>(
-            i[0].some(v => v === "프론트") ? <Content image={i[1]} name={i[2]}></Content> : ""
-          )
-        );
-
-        const language_back_list = store.languageList.map(i =>(
-            i[0].some(v => v === "백") ? <Content image={i[1]} name={i[2]}></Content> : ""
+        const language_machine_list = store.languageList.map(i =>(
+            i[0].some(v => v === "machine") ? <Content image={i[1]} name={i[2]}></Content> : ""
           )
         );
 
@@ -26,36 +21,27 @@ class MachineLearingClickContent extends Component {
                 머신러닝
                 </div>
                 <div className="information">
-                    웹사이트는 쏼라쏼라 입니다.
+                    머신 러닝을 직역하면 '기계학습'입니다.
                     <br /><br />
-                    등등
+                    "데이터를 구문 분석하고 해당 데이터를 통해 학습한 후 
+                    정보를 바탕으로 결정을 내리기 위해 학습한 내용을 적용하는 알고리즘"
+                    <br /><br />
+                    음악 스트리밍 서비스에서 청취자의 플레이 리스트에 있는 노래를
+                    바탕으로 새로운 노래나 아티스트를 추천해주는 것을 예로 들 수 있습니다.
+                    <br /><br />
+                    더 나아가 딥러닝이라는 분야도 있는데 좌측 사이드바에서 "딥러닝"을 클릭하시면 자세한 정보를 얻을 수 있습니다.
+
                 </div>
             </div>
 
             <div className="text">
                 <div className="text_title">
-                    프론트엔드
-                </div>
-                <div className="information">
-                    프론트엔드란?
+                    사용 언어(가장 많이 사용되는 언어는 Python)
                 </div>
             </div>
 
             <div className="container">
-                {language_front_list} 
-            </div>
-
-            <div className="text">
-                <div className="text_title">
-                    백엔드
-                </div>
-                <div className="information">
-                    백엔드란?
-                </div>
-            </div>
-
-            <div className="container">
-                {language_back_list}
+                {language_machine_list} 
             </div>
         </div>
         );
