@@ -14,20 +14,11 @@ class Falcon extends Component {
     const Image = store.findImage("Falcon");
 
     const list = [
-      /* image = 이미지
-        imageText = 그 이미지 이름 */
-        <DescriptionItem image={<img src={Image} alt="My Image"></img>} text={"Falcon"} />,
-
-        /* informationTitle = 설명 위에 타이틀
-           그리고 chileren으로 설명을 넘겨주어야함  */
-        <DescriptionItem informationTitle="Falcon 란?">
-        </DescriptionItem>,
-  
-        /* link = a 태그 */
-        <DescriptionItem link={ <a href="" target="_blank">Falcon</a> } />,
-        <DescriptionItem informationTitle="Falcon 활용 분야">
-        </DescriptionItem>,
-        <DescriptionItem myNameIs={ "Falcon" } />,
+        <DescriptionItem image={<img src={Image} alt="My Image"></img>} imageText={"Falcon"} />,
+      <DescriptionItem informationTitle="Falcon 란? ">- 대규모 앱 백엔드 및 마이크로 서비스 구축을 위한 안정적인 고성능 python 웹 프레임 워크<br />
+      - rest 아키텍처 스타일 권장</DescriptionItem>,
+      <DescriptionItem link="https://falcon.readthedocs.io/en/stable/" />,
+      <DescriptionItem myNameIs={"Falcon"} />, 
     ]
     
     return (

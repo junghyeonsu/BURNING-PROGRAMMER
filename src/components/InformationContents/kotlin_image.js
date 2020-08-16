@@ -5,34 +5,27 @@ import DescriptionList from '../Information/InformationContainer'
 import DescriptionItem from '../Information/InformationItem'
 
 @inject('store')
-@observer 
+@observer
 class kotlin_image extends Component {
-  
+
   render() {
     const { store } = this.props;
 
     const Image = store.findImage("Kotlin");
 
     const list = [
-      /* image = 이미지
-        imageText = 그 이미지 이름 */
-        <DescriptionItem image={<img src={Image} alt="My Image"></img>} text={"Kotlin"} />,
-
-        /* informationTitle = 설명 위에 타이틀
-           그리고 chileren으로 설명을 넘겨주어야함  */
-        <DescriptionItem informationTitle="Kotlin 란?">
-        </DescriptionItem>,
-  
-        /* link = a 태그 */
-        <DescriptionItem link={ <a href="" target="_blank">Kotlin</a> } />,
-        <DescriptionItem informationTitle="Kotlin 활용 분야">
-        </DescriptionItem>,
-        <DescriptionItem myNameIs={ "Kotlin" } />,
+      <DescriptionItem image={ <img src={ Image } alt="My Image"></img> } imageText={ "Kotlin" } />,
+      <DescriptionItem informationTitle="Kotlin 란? ">IntelliJ IDEA의 개발사 JetBrains에서 2011년에 공개한 프로그래밍 언어. </DescriptionItem>,
+      <DescriptionItem link="https://developer.android.com/kotlin/get-started?hl=ko" />,
+      <DescriptionItem informationTitle="Kotlin 활용 분야">안드로이드, 스프링 프레임워크, 톰캣, JavaScript, Java EE, HTML5, 
+      iOS, 라즈베리 파이 등을 개발할 때 사용할 수 있다.
+      </DescriptionItem>,
+      <DescriptionItem myNameIs={ "Kotlin" } />,
     ]
-    
+
     return (
       <div>
-        <DescriptionList list ={list} />
+        <DescriptionList list={ list } />
       </div>
     );
   }
