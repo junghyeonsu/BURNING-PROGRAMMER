@@ -5,12 +5,21 @@
     overflow-y: auto;
     /* border : 1px solid black; */
     margin : 10px;
-    border-radius:7px
+    border-radius:7px;
+    transition: all 1.5s cubic-bezier(.25,.8,.25,1);
+    animation: fade-in 2s;
 }
 
 .InformationItem img {
-    max-width: 20rem;
-    max-height: 20rem;
+  max-width: 20rem;
+  min-width: 20rem;
+  max-height: 20rem;
+  min-height: 20rem;
+  transition: all 1.0s cubic-bezier(.25,.8,.25,1);
+}
+
+.InformationItem img:hover {
+  transform: scale(1.1);
 }
 
 .Information-Container{
@@ -19,6 +28,19 @@
     padding-bottom: 48px;
     overflow-y: auto;
     text-align: center;
+}
+
+.imageText {
+  
+}
+
+.details {
+}
+
+.children {
+}
+
+.link {
 }
 
 /* width가 800px 이상일 때 적용되는 css */
@@ -51,4 +73,13 @@
       grid-auto-rows: minmax(100px, auto);
       grid-template-columns: 1fr 1fr;
     }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

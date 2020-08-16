@@ -50,11 +50,11 @@ class InformationItem extends Component{
     return (
       <div className="InformationItem">
         <div>{image}</div>
-        <div>{imageText}</div>
-        <div>{informationTitle}</div>
-        <div>{details}</div>
-        <div>{children}</div>
-        <div>{link}</div>
+        <div className="imageText">{imageText}</div>
+        <div className="informationTitle">{informationTitle}</div>
+        <div className="details">{details}</div>
+        <div className="children">{children}</div>
+        <div className="link">{link}</div>
         
         {relativeType === "언어" ? 
           <div>
@@ -75,8 +75,6 @@ class InformationItem extends Component{
             </div>
           </div>}  
         </div>
-
-
     ); 
   }
 }
