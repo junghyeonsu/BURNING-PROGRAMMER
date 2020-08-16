@@ -45,6 +45,10 @@ import Tornado from './components/InformationContents/Tornado';
 import Unity from './components/InformationContents/Unity';
 import Vibora from './components/InformationContents/Vibora';
 import Vuejs from './components/InformationContents/Vue';
+import Git from './components/InformationContents/Git';
+import Github from './components/InformationContents/Github';
+import Bitbucket from './components/InformationContents/Bitbucket';
+import Perforce from './components/InformationContents/Perforce';
 
 //분야별
 import Web from './components/Home/Content/WebClickContent';
@@ -122,6 +126,10 @@ class App extends Component {
           <Route exact path="/Unity" component={Unity}/>
           <Route exact path="/Vibora" component={Vibora}/>
           <Route exact path="/Vue.js" component={Vuejs}/>
+          <Route exact path="/Git" component={Git}/>
+          <Route exact path="/Github" component={Github}/>
+          <Route exact path="/Bitbucket" component={Bitbucket}/>
+          <Route exact path="/Perforce" component={Perforce}/>
         </Switch>
       </Router>
     );

@@ -97,9 +97,8 @@ export default class UserStore {
   [["all", "프론트"],                                            VueDotJSImg,    "Vue.js",         ["프레임워크", "Javascript"]],
   [["all", "version"],                                          GitImg,          "Git",         []],
   [["all", "version"],                                          GithunImg,       "Github",         []],
-  [["all", "version"],                                          VisualSourceSafeImg,    "VisualSourceSafe",         []],
-  [["all", "version"],                                          perforceImg,     "perforce",         []],
-  [["all", "version"],                                          bitbucketImg,    "bitbucket",         []],
+  [["all", "version"],                                          perforceImg,     "Perforce",         []],
+  [["all", "version"],                                          bitbucketImg,    "Bitbucket",         []],
  ];  
 
   /* ImformationContents 에서 Image 찾는 함수 */
