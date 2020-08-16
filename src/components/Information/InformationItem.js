@@ -49,34 +49,37 @@ class InformationItem extends Component{
 
     return (
       <div className="InformationItem">
-        <div>{image}</div>
-        <div>{imageText}</div>
-        <div>{informationTitle}</div>
-        <div>{details}</div>
-        <div>{children}</div>
-        <div>{link}</div>
-        
+        <div className="InformationImage">{image}</div>
+        {imageText ? <div className="imageText">{imageText}</div> : ""}
+        {informationTitle ? <div className="informationTitle">{informationTitle}</div> : ""}
+        {details ? <div className="details">{details}</div> : ""}
+        {children ? <div className="children">{children}</div> : ""}
+        {link ? <div className="link-container">
+          <a href={link} target="_blank" className="link">
+           <div className="linkTitle">공식 홈페이지 이동</div>
+          </a>
+        </div> 
+        : "" }
         {relativeType === "언어" ? 
-          <div>
+          myNameIs ? <div className="relative-container">
             {relativeLibraryText}
-            <div className="container">
+            <div className="content-container">
               {relativeLibrary}
             </div>
             {relativeFrameworkText}
-            <div className="container">
+            <div className="content-container">
               {relativeFramework}
             </div>
-          </div>
+          </div> : ""
         : 
-          <div>
+        myNameIs ? <div className="relative-container">
             {relativeLanguageText}
             <div>
               {relativeLanguage}
             </div>
-          </div>}  
+          </div> : ""
+        }
         </div>
-
-
     ); 
   }
 }

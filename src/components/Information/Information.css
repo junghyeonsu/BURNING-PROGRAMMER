@@ -1,45 +1,111 @@
-.InformationItem {
-    flex: 1;
-    padding: 20px 32px;
-    padding-bottom: 48px;
-    overflow-y: auto;
-    /* border : 1px solid black; */
-    margin : 10px;
-    border-radius:7px
-}
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&display=swap');
 
-.InformationItem img {
-    max-width: 20rem;
-    max-height: 20rem;
+body {
+	background-image: url('../../images/information-background.jpg');
+  background-size: 200% 100%;
+  animation: gradient 15s ease infinite;
 }
 
 .Information-Container{
-    flex: 1;
-    padding: 20px 32px;
-    padding-bottom: 48px;
-    overflow-y: auto;
-    text-align: center;
+  flex: 1;
+  padding: 2%;
+  overflow-y: auto;
+  text-align: center;
+  animation: fade-in 2s;
+}
+
+.InformationItem {
+  flex: 1;
+  width: 60%;
+  margin: 1% auto;
+  border-radius:7px;
+  background-color: white;
+  opacity: 95%;
+}
+
+.InformationItem img {
+  padding: 20px 32px;
+  max-width: 20em;
+  min-width: 20em;
+  max-height: 20em;
+  min-height: 20em;
+  transition: all 1.0s cubic-bezier(.25,.8,.25,1);
+  margin-bottom: 1.5rem;
+}
+
+.InformationImage img:hover {
+  transform: scale(1.1);
+}
+
+.imageText {
+  padding: 2%;
+  color: #FFDD1B;
+  font-family: 'Black Han Sans', sans-serif;
+  transition: all 1.0s cubic-bezier(.25,.8,.25,1);
+  font-size: 3em;
+}
+
+.imageText:hover {
+  animation: neon3 1.5s ease-in-out infinite alternate;
+  transform: scale(1.05);
+}
+
+.informationTitle {
+  padding: 2%;
+  color: black;
+  font-family: 'Black Han Sans', sans-serif;
+  transition: all 1.0s cubic-bezier(.25,.8,.25,1);
+  font-size: 2em;
+}
+
+.details {
+  padding: 2%;
+  font-family: 'Do Hyeon', sans-serif;
+  color: black;
+}
+
+.children {
+  padding: 2%;
+  font-family: 'Do Hyeon', sans-serif;
+  color: black;
+}
+
+.link-container {
+  position: relative;
+  height: 7em;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientLink 5s ease infinite;
+}
+
+.link-container:hover a {
+  color: white;
+  transition: all 1.0s cubic-bezier(.25,.8,.25,1);
+}
+
+.link {
+  font-size: 200%;
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+.linkTitle {
+  position: absolute;		
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.relative-container {
+  font-family: 'Black Han Sans', sans-serif;
+  padding: 2%;
+  font-size: 2em;
 }
 
 /* width가 800px 이상일 때 적용되는 css */
 @media (min-width: 800px) {
-    .container {
-      display: grid;
-      background-color: white;
-      
-      padding-left: 10%;
-      padding-right: 10%;
-      padding-bottom: 5%;
-      padding-top: 5%;
-      
-      grid-auto-rows: minmax(100px, auto);
-      grid-template-columns: 500px;
-    }
-  }
-  
-  /* width가 800px 이하일 때 적용되는 css */
-  @media (max-width: 800px) {
-    .container {
+    .content-container {
       display: grid;
       background-color: white;
       
@@ -51,4 +117,71 @@
       grid-auto-rows: minmax(100px, auto);
       grid-template-columns: 1fr 1fr;
     }
+  }
+  
+  /* width가 800px 이하일 때 적용되는 css */
+  @media (max-width: 800px) {
+    .content-container {
+      display: grid;
+      background-color: white;
+      
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-bottom: 5%;
+      padding-top: 5%;
+      
+      grid-auto-rows: minmax(100px, auto);
+      grid-template-columns: 1fr 1fr;
+    }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.95;
+  }
+}
+
+@keyframes gradient {
+	0% {
+    background-position: 0% 0%;
+  }
+  20% {
+    background-position: 3% 0%;
+  }
+  40% {
+    background-position: 5% 0%;
+  }
+	60% {
+		background-position: 4% 0%;
+  }
+  80% {
+    background-position: 2% 0%;
+  }
+	100% {
+		background-position: 0% 0%;
+	}
+}
+
+@keyframes gradientLink {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+@keyframes neon3 {
+  from {
+    text-shadow: 0 0 0px #fff, 0 0 0px #fff;
+  }
+  to {
+    text-shadow: 0 0 0px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px;
+  }
 }
